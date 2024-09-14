@@ -1,0 +1,905 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">   
+    <link rel="icon" href="icon1.jpg">
+    <title>services</title>
+    <link rel="stylesheet" href="home.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    
+      
+      <script>
+        $(document).ready(function() {
+          $('.more').hide();
+          $('.more-link').click(function() {
+            $('.more').toggle();
+            $(this).text(function(_, currentText) {
+              return currentText === '>Read more' ? '>Read less' : '>Read more';
+            });
+            return false;
+          });
+        });
+        
+        </script>  
+    <style>
+body{
+    background-color: rgb(245, 245, 245);
+    display:flexbox;    
+}
+
+.space1{
+  margin-top: 3%;
+}
+
+#wrapper{
+    margin-top: 10%;
+    width: 95%;
+    margin-left: auto;
+    margin-right: auto;
+    
+}
+.serv1{
+   margin-left: 10%;
+   margin-right: 5%;
+   display: inline-block;
+}
+.serv2{
+    margin-right: 10%;
+    margin-left: 5%;
+    display: inline-block;
+}
+.space{
+    margin-top: 10%;
+}
+.h1{
+    color:rgb(0,68,255);
+    text-align: center;
+}
+h2{
+    color:rgb(0,68,255) ;
+}
+.p{
+    font-size: 26px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.pfoot{
+  text-align: center;
+    font-size: 21px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    padding-bottom: 30px;
+    padding-top: 30px;
+}
+
+.ul {
+  list-style-type: circle;
+}
+.ul li{
+    font-size: 24px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.ul li:hover{
+  list-style-type: disc;
+}
+.center{
+    max-width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.a{
+    text-decoration: none;
+    color: rgb(0,68,255);
+    font-size: 1.2em;
+}
+.a:hover{
+    color:aquamarine;
+}
+.a:active {
+    color: rgb(61, 28, 102);
+}  
+.portfolio-item-wrapper {
+    position: relative;
+  }
+  
+.portfolio-img-background {
+    border-radius: 50%;   
+    background-repeat: no-repeat;
+    height: 360px;
+    width: 360px;
+  }
+  
+  .img-text-wrapper {
+    position: absolute;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    text-align: center;
+    padding-left: 100px;
+    padding-right: 100px;
+  }
+  
+  .img-text-wrapper .subtitle {
+    transition: 1s;
+    color: transparent;
+  }
+  
+  .image-blur {
+    transition: 1s;
+    filter: brightness(10%);
+  }
+  
+  .img-text-wrapper:hover .subtitle {
+    cursor: pointer;
+    color: lightseagreen;
+    font-weight: 600;
+    font-size: 1.4em;
+  }
+
+
+  .product {
+  position: relative;
+  overflow: hidden;
+  padding: 20px;
+}
+.product-container {
+  padding: 0 10vw;
+  display: flex;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+}
+.more-link{
+  text-decoration: none;
+    color: rgb(0,68,255);
+    font-size: 1.2em;
+}
+.more-link:hover{
+    color:aquamarine;
+}
+.more-link:active {
+    color: rgb(61, 28, 102);
+}  
+.product-card {
+  flex: 0 0 auto;
+  width: 250px;
+  height: 450px;
+  margin-right: 40px;
+}
+.pre-btn,
+.nxt-btn {
+  border: none;
+  width: 10vw;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgb(245, 245, 245) 100%);
+  cursor: pointer;
+  z-index: 8;
+}
+
+.pre-btn {
+  left: 0;
+  transform: rotate(180deg);
+}
+
+.nxt-btn {
+  right: 0;
+}
+
+.pre-btn img,
+.nxt-btn img {
+  opacity: 0.2;
+}
+
+.pre-btn:hover img,
+.nxt-btn:hover img {
+  opacity: 1;
+}
+
+.product-container::-webkit-scrollbar {
+  display: none;
+}
+.container{
+  display:flex;
+}
+
+.card{
+    cursor: pointer;
+}
+.face{
+    width: 300px;
+    height: 200px;
+    transition: 0.5s;
+}
+.face1{
+    position: relative;
+    background:  rgb(245, 245, 245);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    transform: translateY(100px);
+}
+.container .card:hover .face.face1{
+    transform: translateY(0);
+}
+ .content img{
+    width: 250px;
+    height: 200px;
+}
+ .content h3{
+    margin-top: 10px;
+    margin-bottom: 2em;
+    text-align: center;
+    font-size: 1.5em;
+    color :rgb(0,68,255);
+}
+.content:hover h3 {
+  color :lightseagreen;
+}
+.face2{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+    transform: translateY(-100px);
+}
+
+.container .card:hover .face.face2{
+    transform: translateY(0);
+}
+.content p{
+    margin: 0;
+    padding: 0;
+    font-size: 1.2em;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+}
+ .content a{
+    margin: 15px 0 0;
+    display:  inline-block;
+    text-decoration: none;
+    font-weight: 900;
+    color: black;
+    padding: 5px;
+    border: 1px solid black;
+    transition: 0.5s;
+}
+ .content a:hover{
+    background-color: aqua;
+    color: black;
+    transform: scale(1.2);
+}
+.content a:active{
+  background-color:black;
+    color:red;
+}
+.more {
+  display: none
+    }
+.apply{
+    width: 40%;
+    margin-top: 2%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.apply a{
+    display:  inline-block;
+    text-decoration: none;
+    font-weight: 900;
+    color: rgb(245, 245, 245);
+    padding: 10px;
+    background-color:  rgb(0,68,255);
+    border: 1px solid rgb(0,68,255);
+    transition: 0.5s;
+}
+.apply a:hover{
+   background-color: rgb(245, 245, 245);
+    color:  rgb(0,68,255);
+    transform: scale(1.2);
+}
+.apply a:active{
+  background-color:black;
+    color:red;
+}
+#back-to-top{
+    position: fixed;
+    bottom: 3em;
+    right: 3em;
+    color: rgb(0, 0, 0);
+    border: none;
+    border-radius: 5px;
+    padding: 1em;
+    text-transform: uppercase;
+    cursor: pointer;
+    font-weight: 700;
+    display: inline-block;
+    opacity: 0;
+    text-decoration: none;
+    font-size: .75em;
+  }
+  #back-to-top:hover{
+    background-color: beige;
+  }
+  #back-to-top.visible{
+    opacity: 1;
+  }
+
+  .arrow-button2 {
+    background-color: #00000000;
+  border: none;
+  color: #23a3f8;
+  font-size: 15px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  border-radius: 50%;
+}
+
+.arrow-button2:after {
+  content: '';
+  display: inline-block;
+  width: 0.75em;
+  height: 0.75em;
+  border: solid #29b8fa;
+  border-width: 0 0.25em 0.25em 0;
+  transform: rotate(220deg);
+  margin: 5px;
+}
+
+    </style>
+</head>
+<body>
+  <!-- this is the nav section -->
+    <header>
+         <a href="#" class="logo" > LIB </a>
+         <nav>
+             <ul>
+                 <li> <a href="Services.html"> Services </a> </li>
+                 <li> <a href="#"> Menu </a> 
+                     <ul>
+                         <li> <a href="home.html"> Home </a> </li>
+                         <li> <a href="Team.html"> Our Team </a> </li>
+                         <li> <a href="About.html"> Locate Us </a> </li>
+                         <li> <a href="#"> Services+ </a> 
+                             <ul>
+                                 <li> <a href="Services.html"> Services </a> </li>
+                                 <li> <a href="onlineB.html"> Online Banking </a> </li>
+                             </ul>
+                         </li>
+                     </ul>
+                 </li>
+                 <li> <a href="Contact.html"> Contact US </a> </li>
+             </ul>
+         </nav>
+     </header>
+  
+     <main>
+      <diV id="wrapper">
+         <!-- the top section which contains the cards  -->
+        <h1 class="h1"><a class="a" href="#services">LIB BANK SERVICES</a></h1>
+        <div class="space1">
+          <section class="product"> 
+            <button class="pre-btn"><img src="arrow.png" alt=""></button>
+            <button class="nxt-btn"><img src="arrow.png" alt=""></button>
+            <div class="product-container">
+                <div class="container">
+                <div class="product-card">
+                    <div class="card">
+                        <div class="face face1">
+                            <div class="content">
+                                <img src="billdomiciliation.jpg">
+                                <h3>Bill Domiciliation</h3>
+                            </div>
+                        </div>
+                        <div class="face face2">
+                            <div class="content">
+                                <p>Domicile Your Bills; We&#39;ll Take Care of the Rest we can save you the hassle of 
+                                  dealing with cash and paperwork through its Bill Domiciliation service</p>
+                                    <a href="#billdomiciliation">Read More</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="card">
+                        <div class="face face1">
+                            <div class="content">
+                                <img src="depositboxes.jpg">
+                                <h3>Deposit Boxes</h3>
+                            </div>
+                        </div>
+                        <div class="face face2">
+                            <div class="content">
+                                <p>Complete Safety and Privacy in a Box
+                                  Enjoy peace of mind with our secure in-branch 
+                                  safe deposit boxes where you can store your valuables all year long.</p>
+                                    <a href="#depositboxes">Read More</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="card">
+                        <div class="face face1">
+                            <div class="content">
+                                <img src="3dsecure.jpg">
+                                <h3>3D-Secure</h3>
+                            </div>
+                        </div>
+                        <div class="face face2">
+                            <div class="content">
+                                <p>The &quot;3D Secure&quot; is a free-of-charge service facilitated by Visa and MasterCard to increase 
+                                  transactions security level.</p>
+                                    <a href="#3dsecure">Read More</a>
+                            </div>
+                        </div>
+                  </div> 
+                </div>
+                <div class="product-card">
+                    <div class="card">
+                        <div class="face face1">
+                            <div class="content">
+                                <img src="wealthplanning.jpg">
+                                <h3>Wealth Planning</h3>
+                            </div>
+                        </div>
+                        <div class="face face2">
+                            <div class="content">
+                                <p> Preserving your legacy begins with mapping out your wealth objectives and designing intergenerational plans to achieve them.</p>
+                                    <a href="#wealthplanning">Read More</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="card">
+                        <div class="face face1">
+                            <div class="content">
+                                <img src="creditsolution.jpg">
+                                <h3>Credit Solution</h3>
+                            </div>
+                        </div>
+                        <div class="face face2">
+                            <div class="content">
+                                <p>As one of our clients, you can benefit from our portfolio leveraging as well as mortgage and personalised financing options.</p>
+                                    <a href="#creditsolution">Read More</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="card">
+                        <div class="face face1">
+                            <div class="content">
+                                <img src="asset.jpg">
+                                <h3>Asset creation</h3>
+                            </div>
+                        </div>
+                        <div class="face face2">
+                            <div class="content">
+                                <p>Our long history of managing the wealth of entrepreneurial
+                                   families has given us invaluable know-how to help you implement your investment goals.</p>
+                                    <a href="#Asset creation and preservation">Read More</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="card">
+                        <div class="face face1">
+                            <div class="content">
+                                <img src="loans.jpg">
+                                <h3>PERSONAL LOAN</h3>
+                            </div>
+                        </div>
+                        <div class="face face2">
+                            <div class="content">
+                                <p>Whether you’re redecorating your home, planning your wedding or
+                                   the trip of a lifetime, sometimes an extra push is all you need.</p>
+                                    <a href="#personal loans">Read More</a>
+                            </div>
+                        </div>
+                    </div>
+                </div></div>
+            </div>
+        </section>
+ 
+         
+       </div>  
+
+     <!-- the start of our services -->      
+  <div id="services"></div>
+  <div class="space1">
+  <div class="center">
+      <h1 class="h1"><a class="a" href ="#">Services</a></h1>
+      <br>
+      <p class="p">Your journey begins with us knowing your unique priorities, needs and goals. According to your risk appetite and preferences, we may discuss and suggest 
+          bespoke solutions for your 
+          attention from our best-of-breed product selection based on independent tracking of a large array of funds, structured products and insurance options.</p>
+          <br>
+          <p class="p">Your private banker, supported by our team of portfolio managers and trading specialists, is always at hand to help you make sound financial decisions. 
+              Insights from our investment strategy and research teams will help you stay abreast of global market movements.</p>
+          </div>
+      </div>
+       <!--Bill Domiciliation -->
+      <div id="billdomiciliation"></div>
+    <diV class="space">
+   <table>
+      <tr>
+          <td><div class="portfolio-item-wrapper">
+                <img class="portfolio-img-background" src="billdomiciliation.jpg">
+              <div class="img-text-wrapper">
+                <div class="subtitle">Bill Domiciliation</div>
+              </div>
+            </div></td>
+          <td> <div class="serv1">
+        <h1 class="h1"><a class="a" href ="#">Bill Domiciliation</a></h1>
+          <p class="p">Domicile Your Bills; We&#39;ll Take Care of the Rest we can save you the hassle of 
+              dealing with cash and paperwork through its Bill Domiciliation service,
+               as your payments will be direclty debited from your account.
+          </p>
+          <h2>WHAT DO I GET?</h2>
+          <p class="p">Regular settlement of your bills at Bank liu</p>
+          <ul class="ul">
+              <li>Mobile bill payment</li>
+              <li>Landline bill payment</li>
+              <li>Electricity bill payment</li>
+              <li>Internet payments</li>
+              <li>Cards payments</li></ul>
+              <p class="p">Fees vary between usd 3$ and usd 5$</p>
+          </div></td>
+      </tr>
+    </table>
+      </diV>
+      <!--Deposit Boxes-->
+     <div id="depositboxes"></div>
+      <diV class="space">
+    <table>
+      <tr>
+          
+         <td> <div class="serv2">
+              <br><br>
+              <h1 class="h1"> <a  class="a" href ="#">Safe Deposit Boxes</a></h1>
+              <p class="p">Complete Safety and Privacy in a Box
+                  Enjoy peace of mind with our secure in-branch 
+                  safe deposit boxes where you can store your valuables all year long.
+                   You also get to pick the size of the box that suits your needs at a very affordable fee.</p>
+          </div></td>
+          <td>
+              <div class="portfolio-item-wrapper">
+                  <img class="portfolio-img-background" src="depositboxes.jpg">
+                  <div class="img-text-wrapper">
+                    <div class="subtitle">Deposit Boxes</div>
+                  </div>
+                </div>
+            </td>
+      </tr>
+    </table>
+  </diV>
+  <!--3D SECURE-->
+  <div id="3dsecure"></div>
+  <diV class="space">
+    <table>
+          <tr>
+             <td>
+                <div class="portfolio-item-wrapper">
+                  <img class="portfolio-img-background" src="3dsecure.jpg">
+                    <div class="img-text-wrapper">
+                      <div class="subtitle">&nbsp;&nbsp;3D-Secure</div>
+                    </div>
+                </div>
+                  </td>
+                   <td>
+                      <div class="serv1">
+                   <h1 class="h1"><a class="a" href ="#">3D SECURE</a></h1>
+                   <div class="content">
+                  <p style="font-size: 26px;font-family: Georgia, 'Times New Roman', Times, serif;">The &quot;3D Secure&quot; is a free-of-charge service facilitated by Visa and MasterCard to increase 
+                      transactions security level when shopping online with your card.</p><br>
+                        <p style="font-size: 26px;font-family: Georgia, 'Times New Roman', Times, serif;">As you will be automatically enrolled in the 3D secure service upon card activation, (you don&#39;t require any 
+                      additional registration) you will receive a 6 digit One-Time Password via your preferred channel (either by SMS or email) 
+                      for every online purchase you make with your card. All you have to do is enter the One-Time Password received to complete your transaction.
+                  </p>
+                  <div class="more">
+                  <ul class="ul">
+                      <li>With the upgraded 3D Secure service you will receive a new one-time password, each time you make an online purchase with your card.</li>
+                      <li>No need to worry about remembering your password anymore</li>
+                      <li>The SMS or email upon which the One-Time Password will be sent to you, are the SMS and/or email registered at our end.</li>
+                   </ul>
+                   <p style="font-size: 26px;font-family: Georgia, 'Times New Roman', Times, serif;">
+                      To ensure a hassle-free experience, please make sure that we have your updated contact details in our records:
+                  </p>
+                  <ul class="ul">
+                      <li>Updated mobile number</li>
+                      <li>Updated email address</li>
+                  </ul>
+                  <p style="font-size: 26px;font-family: Georgia, 'Times New Roman', Times, serif;">
+                    If one of the above is missing, Kindly head to your branch to provide us with the needed information mentioned 
+                      to make sure you receive a new One-Time Password each time you purchase online with your card.OR contact us on our website.
+                  </p>                    
+              </div> </div><a href="#" class="more-link">>Read more</a></div>
+            </td>
+          </tr>
+     </table>
+  </diV>
+  <!--wealthplanning-->
+          <div id="wealthplanning"></div>
+          <diV class="space">
+            <table>
+              <tr>
+                 <td> <div class="serv2">
+                      <h1 class="h1"><a class="a" href ="#">Wealth planning</a></h1>
+                      <p class="p">
+                      Preserving your legacy begins with mapping out your wealth objectives and designing intergenerational plans to achieve them.
+                      </p>
+                      <p class="p">
+                      Our team of wealth planners is here to help you put together a plan tailored to your needs. We work 
+                      closely with our wholly owned trust company, BOS Trustee Limited, and anecosystem of reputable external 
+                      advisors, such as lawyers, accountants, and consultants to help achieve your succession objectives, 
+                      wealth transfer and legacy goals.
+                      </p>
+                  </div></td>
+                  <td>
+                      <div class="portfolio-item-wrapper">
+                          <img class="portfolio-img-background" src="wealthplanning.jpg">
+                          <div class="img-text-wrapper">
+                            <div class="subtitle">Wealth Planning</div>
+                          </div>
+                        </div>
+                  </td> 
+              </tr>
+            </table>
+          </diV>
+          <!--creditsolution-->
+          <div id="creditsolution"></div>
+          <diV class="space">
+            <table>
+              <tr>
+                  <td>
+                      <div class="portfolio-item-wrapper">
+                          <img class="portfolio-img-background" src="creditsolution.jpg">
+                          <div class="img-text-wrapper">   
+                            <div class="subtitle">Credit Solution</div>
+                          </div>
+                        </div>
+                  </td>
+                  <td><div class="serv1">
+                   <h1 class="h1">
+                    <a class="a" href ="#">Credit solutions</a></h1>
+                      <p class="p">As one of our clients, you can benefit from our portfolio leveraging as well 
+                          as mortgage and personalised financing options to enhance returns or improve liquidity.</p>
+                          <p class="p">You will also have the choice of having the investment and commercial banking facilities 
+                              of OCBC Bank  our parent company  open to you, for the financing of family businesses and new ventures.</p>
+                              <h2>Financing</h2>
+                              <ul class="ul">
+                                  <li>Portfolio leveraging</li>
+                                  <li>Residential real estate financing</li>
+                                  <li>Insurance premium financing</li>
+                                  <li>Corporate finance</li>
+                                  <li>Structured transactions</li>
+                              </ul>
+                  </div></td>
+              </tr>
+            </table>
+          </diV>
+          <!--Asset creation and preservation-->
+          <div id="Asset creation and preservation"></div>
+          <diV class="space">
+            <table>
+              <tr>
+                <td><div class="serv2">
+                   <h1 class="h1"><a class="a" href ="#">Asset creation and preservation</a></h1>
+                   <div class="content">
+                      <p style="font-size: 26px;font-family: Georgia, 'Times New Roman', Times, serif;">Our long history of managing the wealth of entrepreneurial families has given us
+                         invaluable know-how to help you implement your investment goals, family governance frameworks and private trusts.</p><br>
+                         <p style="font-size: 26px;font-family: Georgia, 'Times New Roman', Times, serif;">
+                          You can invest in a number of ways through our team of investment specialists; from fully discretionary to active
+                           advisory and even execution only.With the right plan for your investments and proper management 
+                           of your assets, you can sustain your wealth within the family for generations to come.</p>
+                           <h2>Investment products</h2>
+                           <ul class="ul">
+                            <li>Cash and money markets</li>
+                            <li>Investment grade bonds</li>
+                            <li>High yield bonds</li>
+                            <li>Equities</li>
+                            <li>Foreign exchange</li>
+                            <li>Derivatives</li>
+                            <li>Structured products</li>
+                            <li>Third party mutual funds</li>
+                           </ul>
+                           <div class="more">
+                           <h2>Investment services</h2>
+                           <ul class="ul">
+                              <li>Discretionary portfolio management1: cash, securities and funds</li>
+                              <li>Advisory portfolio management</li>
+                              <li>Premium advisory services Premium equity, fixed income and foreign exchange advisory
+                                 services1 along with direct dealing and 24-hour FX trading will be fully accessible for your utmost convenience</li>
+                           </ul>
+                           <h2>Asset preservation</h2>
+                           <ul class="ul">
+                            <li>Estate planning</li>
+                            <li>Financial planning</li>
+                            <li>Life insurance</li>
+                           </ul></div>
+                 </div><a  href="#" class="more-link">>Read more</a> 
+                </div></td>
+                  <td>
+                      <div class="portfolio-item-wrapper">
+                          <img class="portfolio-img-background" src="asset.jpg">
+                          <div class="img-text-wrapper">
+                            
+                      
+                            <div class="subtitle">Asset creation and preservation</div>
+                          </div>
+                        </div>
+                  </td>
+                  
+              </tr>
+            </table>
+          </diV>
+          <!--personal loans-->
+          <div id="personal loans"></div>
+          <diV class="space">
+            <table>
+              <tr>
+                  <td>
+                      <div class="portfolio-item-wrapper">
+                          <img class="portfolio-img-background" src="loans.jpg">
+                          <div class="img-text-wrapper">   
+                            <div class="subtitle">PERSONAL LOANS</div>
+                          </div>
+                        </div>
+                  </td>
+                  <td><div class="serv1">
+                   <h1 class="h1">
+                    <a class="a" href ="#">Personal Loans</a></h1>
+                     <h2>The Right Loan for the Right Need</h2>
+                     <p class="p">
+                      Whether you’re redecorating your home, planning your wedding or the trip of a lifetime,
+                       sometimes an extra push is all you need. Thus,<span style="color: rgb(0,68,255);">LIB BANK</span>  gives you flexible and comfortable borrowing options.
+                     </p>
+                     <h2>WHAT DO I GET?</h2>
+                     <ul class="ul">
+                      <li>Loan amount up to 15 times your salary</li>
+                      <li>Loan period starting 12 months and up to 60 months</li>
+                      <li>Fast loan approval, same day if applied before 12pm</li>
+                      <li>Compounded debit interest rates:</li>
+                     </ul>
+                     <h2>Interest Rates:</h2>
+                     <h2>In USD:</h2>
+                     <ul class="ul">
+                      <li>With payroll domiciliation: (BRR + 7.75%) up to 5 years</li>
+                      <li>Salaried employees: (BRR + 7.75%) up to 5 years</li>
+                      <li>Self-employed and professionals: (BRR + 7.75%) up to 3 years.</li>
+                     </ul>
+                     <p style="font-size: medium;">BRR in USD: 10.14%</p>
+                     <p style="font-size: medium;">You will be charged USD 150 in file fees.</p>
+                     <div class="apply">
+                     <a href="form.html">Apply Now</a></div>
+                  </div></td>
+              </tr>
+            </table>
+          </diV>
+            <div class="space1">
+          <p class="pfoot"><span style="color: rgb(0,68,255)">For More Information</span> please <a  class="a" href="Contact.html">contact us</a>  or visit us at our <a class="a" href="https://maps.google.com/">branch!</a></p>
+    </div>
+  </diV>
+  </main>
+<div class="space1"></div>
+    <footer>
+
+      <div class="footer">
+        <div class="contain">
+          <div class="col">
+            <h1>Bank LIB</h1>
+            <p class="footerp">
+              With its full and diversified range 
+              of products and services,
+               Bank LIB ranks first among Lebanese banks
+                in terms of total assets
+            </p>
+          </div>
+        <div class="col">
+          <h1>About The Bank</h1>
+          <ul>
+            <li>Bank LIB Group</li>
+            <li>About Us</li>
+            <li>Services</li>
+            <li>Careers</li>
+            <li>Publicationsh</li>
+          </ul>
+        </div>
+        <div class="col">
+          <h1>PERSONAL BANKING</h1>
+          <ul>
+            <li>Accounts</li>
+            <li>Cards</li>
+            <li>Services</li>
+            <li>Digital Solutions</li>
+            <li>Updates</li>
+          </ul>
+        </div>
+        <div class="col">
+          <h1>BUSINESS BANKING</h1>
+          <ul>
+            <li>SME Banking</li>
+            <li>Commercial Banking</li>
+            <li>Specialized Lending</li>
+            <li>Cards</li>
+            <li>Get in touch</li>
+          </ul>
+        </div>
+        <h1 class="socialh1">Social</h1>
+        <div class="col-social">
+          <ul>
+            <li> <a href="https://www.facebook.com/" > <i class="fa fa-facebook-f"></i> </a>  </li>
+            <li> <a href="https://www.instagram.com/" ><i class="fa fa-instagram" style="transition: color 0.2s;"></i> </a>  </li>
+            <li> <a href="https://www.youtube.com/" ><i class="fa fa-youtube-play"></i> </a></li>
+            <li> <a href="https://twitter.com/?lang=en" ><i class="fa fa-twitter"></i> </a> </li>
+            <li> <a href="https://www.linkedin.com/" > <i class="fa fa-linkedin-square"></i> </a> </li>
+        </div>
+      <div class="clearfix"></div>
+      </div>
+      </div>
+      <a id="back-to-top"><button class="arrow-button2"></button></a>
+  </footer>
+  <!--arrow script-->
+ <script>
+  var btn = document.getElementById("back-to-top");
+    window.addEventListener("scroll", function () {
+      if(window.scrollY >= 400) {
+        btn.style.opacity = "1";
+      }else {
+        btn.style.opacity = "0";
+      }
+    });
+    btn.onclick = function () {
+      window.scrollTo({
+        left:0,
+        top:0,
+        behavior:"smooth",
+      });   
+    }
+  </script>
+</body>
+</html>
+<!--image script-->
+<script>
+  const x = document.querySelectorAll('.portfolio-item-wrapper');
+  x.forEach(l => {
+    const img = l.querySelector('img');
+    l.addEventListener('mouseover', () => img.classList.add('image-blur'));
+    l.addEventListener('mouseout', () => img.classList.remove('image-blur'));
+  });
+  </script>
+<!--scrolling script-->
+<script>
+  const productContainers = document.querySelectorAll('.product-container');
+  const nxtBtn = document.querySelectorAll('.nxt-btn');
+  const preBtn = document.querySelectorAll('.pre-btn');
+  
+  productContainers.forEach((item, i) => {
+    const containerWidth = item.getBoundingClientRect().width;
+  
+    nxtBtn[i].addEventListener('click', () => {
+      item.scrollLeft += containerWidth;
+    });
+  
+    preBtn[i].addEventListener('click', () => {
+      item.scrollLeft -= containerWidth;
+    });
+  });
+  
+  </script>
+
+
+
+

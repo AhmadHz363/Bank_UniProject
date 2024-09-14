@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'>
+    <link rel='stylesheet' href='https://fontawesome.com/v5/icons/arrow-circle-up?f=classic&s=solid'>
+    <link rel="stylesheet" href="https://fontawesome.com/icons/arrow-right?f=classic&s=solid">  
+    <link rel="stylesheet" href="home.css">
+    <link rel="icon" href="icon1.jpg">
+    <title>LIB Bank</title>
+    <style>
+      
+.hero {
+  position: relative;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 140px 50px;
+  background: linear-gradient(to top, rgba(0,0,0,0.5)50%,rgba(0,0,0,0.5)50%), url(homeBanner.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  z-index: 1;
+}
+
+@media (max-width: 767px) {
+  .hero {
+    flex-direction: column;
+    padding: 100px 20px;
+  }
+
+  .hero .welcome-section {
+    width: 100%;
+    right: auto;
+    text-align: center;
+  }
+
+  .hero .form {
+    margin: 0;
+  }
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+  .hero {
+    padding: 120px 30px;
+  }
+
+  .hero .welcome-section {
+    width: 60%;
+    right: 10%;
+  }
+
+  .hero .form {
+    margin-right: 0;
+    margin-left: auto;
+  }
+}
+
+.hero .welcome-section {
+  width: 50%;
+  text-align: center;
+  position: relative;
+  right: 20%;
+  font-weight: 700;
+  font-size: 1.2em;
+  padding: 50px 0;
+  margin: 0 auto;
+}
+
+.hero .welcome-section h1 {
+  font-size: 36px;
+  font-weight: bold;
+  color: var(--button-color);
+  margin-bottom: 20px;
+}
+.hero .welcome-section p {
+  color: #ffffff;
+  margin-bottom: 40px;
+  line-height: 1.5;
+  font-size: 1.2em;
+}
+.hero .welcome-section .welcome-btn {
+  margin-top: -5px;
+  color: var(--primary-color);
+  padding: 15px;
+  border: none;
+  border-radius: 5px;
+  text-transform: uppercase;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.hero .welcome-section .welcome-btn:hover {
+  color: #fff;
+  background-color: var(--primary-color);
+  border-radius: 5px;
+  box-shadow: 0 0 5px var(--primary-color),
+              0 0 25px var(--primary-color),
+              0 0 50px var(--primary-color),
+              0 0 100px var(--primary-color);
+  transform: scale(1.1);
+}
+
+.hero .form {
+    position: relative;
+    margin-top: 20px;
+    height: 380px;
+    border-radius: 10px;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(to top, rgba(0,0,0,0.8)50%,rgba(0,0,0,0.8)50%);
+    margin-right: -20px;
+}
+
+.hero .form h2{
+  width: 220px;
+  font-family: sans-serif;
+  text-align: center;
+  color: var(--primary-color);
+  font-size: 22px;
+  background-color: #fff;
+  border-radius: 10px;
+  margin: 5px;
+  padding: 12px;
+}
+
+.hero .form input{
+  width: 240px;
+  height: 35px;
+  background: transparent;
+  outline: none;
+  border-bottom: 1px solid var(--button-color);
+  border-right: none;
+  border-left: none;
+  color: #fff;
+  font-size: 15px;
+  letter-spacing: 1px;
+  margin-top: 30px;
+  font-family: sans-serif;
+}
+
+
+.hero .form input:focus{
+  outline: none;
+}
+
+::placeholder{
+  color: #fff;
+  margin: 5px;
+}
+
+.form .link{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 17px;
+  padding-top: 20px;
+  text-align: center;
+  color: #fff;
+}
+.form .link a{
+  text-decoration: none;
+  color: var(--primary-color);
+}
+
+.signhover:hover{
+  color: aqua;
+}
+
+.sign-up{
+  cursor: pointer;
+}
+
+.eye {
+  color: #fff;
+  font-size: 1.3em;
+  position: absolute;
+  margin-top: 135px;
+  margin-left: 220px;
+  cursor: pointer;
+}
+
+.eye:hover {
+  color: var(--primary-color);
+}
+
+.btn{
+  width: 240px;
+  height: 40px;
+  background: var(--primary-color);
+  border: none;
+  margin-top: 30px;
+  font-size: 18px;
+  border-radius: 10px;
+  cursor: pointer;
+  color: #fff;
+  transition: 0.4s ease;
+  padding: 10px;
+}
+
+
+.btn:hover{
+  background: #fff;
+  color: var(--button-color);
+  box-shadow: 0 0 5px var(--primary-color),
+  0 0 25px var(--primary-color),
+  0 0 30px var(--primary-color);
+}
+
+
+.btn a{
+  text-decoration: none;
+  color: #000;
+  font-weight: bold;
+}
+
+.btn a:hover{
+  color: var(--button-color);
+}
+
+.form .link{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 17px;
+  padding-top: 20px;
+  text-align: center;
+  color: #fff;
+}
+.form .link a{
+  text-decoration: none;
+  color: var(--primary-color);
+}
+
+.services {
+  background-color: #fff;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
+  padding: 50px;
+  margin-top: 50px;
+  text-align: center;
+  z-index: 920;
+}
+
+.headerh2 {
+  margin-top: 10px;
+  padding: 10px;
+  text-align: center;
+  justify-content: center;
+  font-size: 36px;
+  color: var(--primary-color);
+  margin-bottom: 50px;
+}
+
+.services {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 45px;
+}
+
+.services .service-item {
+  text-align: center;
+  background-color: #fff;
+  width: 18em;
+  height: 21em; 
+  box-shadow: 0 5px 30px rgba(1 1 1 / 15%);
+  border-radius: 10px;
+  padding: 40px;
+  transition: 0.4s ease;
+}
+
+.services .service-item:hover{
+  transform: scale(1.1);
+  box-shadow: 0 2px 20px var(--primary-color);
+}
+
+.services .service-item h3 {
+  font-size: 24px;
+  color: #444;
+  margin-bottom: 20px;
+}
+
+.services .service-item p {
+  font-size: 18px;
+  color: #888;
+  margin-bottom: 20px;
+  line-height: 1.5;
+  font-weight: bold;
+}
+
+.linktopage {
+  text-decoration: none ;
+  color: var(--primary-color);
+  font-weight: bold;
+}
+
+.linktopage:hover{
+  color: var(--button-color);
+}
+
+.services .service-item .icon {
+  font-size: 36px;
+  color: #444;
+  margin-bottom: 20px;
+  display: inline-block;
+}
+
+.Ready {
+  background-color: #1a1919ec;
+  color: #fff;
+  text-align: center;
+  padding: 100px;
+  margin-top: 50px;
+  z-index: 920;
+}
+
+.Ready h2 {
+  font-size: 36px;
+  margin-bottom: 20px;
+  color: var(--button-color);
+}
+
+.Ready p {
+  font-size: 18px;
+  margin-bottom: 50px;
+  justify-content: space-between;
+  font-weight: 300;
+  align-items: center;
+}
+
+.Readybtn{
+  padding: 20px 40px;
+  border-radius: 40px;
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: bold;
+  margin-top: 20px;
+  display: inline-block;
+  border: 2px solid #444;
+  width: 240px;
+  height: 70px;
+  background: var(--primary-color);
+  cursor: pointer;
+  color: #000;
+  transition: 0.4s ease;
+}
+
+.Readybtn:hover {
+  transform: scale(1.1);
+  background-color: var(--button-color);
+  color: #fff;
+  box-shadow: 0 0 5px var(--button-color),
+}
+
+#back-to-top{
+    position: fixed;
+    bottom: 3em;
+    right: 3em;
+    color: rgb(0, 0, 0);
+    border: none;
+    border-radius: 5px;
+    padding: 1em;
+    text-transform: uppercase;
+    cursor: pointer;
+    font-weight: 700;
+    display: inline-block;
+    opacity: 0;
+    text-decoration: none;
+    font-size: .75em;
+  }
+  #back-to-top:hover{
+    background-color: beige;
+  }
+  #back-to-top.visible{
+    opacity: 1;
+  }
+
+  .arrow-button2 {
+    background-color: #00000000;
+  border: none;
+  color: #23a3f8;
+  font-size: 15px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  border-radius: 50%;
+}
+
+.arrow-button2:after {
+  content: '';
+  display: inline-block;
+  width: 0.75em;
+  height: 0.75em;
+  border: solid #29b8fa;
+  border-width: 0 0.25em 0.25em 0;
+  transform: rotate(220deg);
+  margin: 5px;
+}
+
+    </style>
+  </head>
+  <body>
+    <header class="header">
+         <a href="#" class="logo" > LIB </a>
+         <nav>
+             <ul>
+                 <li> <a href="home.html"> Home </a> </li>
+                 <li> <a href="#"> Menu </a> 
+                     <ul>
+                         <li> <a href="Team.html"> Our Team </a> </li>
+                         <li> <a href="About.html"> About Us </a> </li>
+                         <li> <a href="#"> Services+ </a> 
+                             <ul>
+                                 <li> <a href="Services.html"> Services </a> </li>
+                                 <li> <a href="onlineB.html"> Online Banking </a> </li>
+                             </ul>
+                         </li>
+                     </ul>
+                 </li>
+                 <li> <a href="Contact.html"> Contact US </a> </li>
+             </ul>
+         </nav>
+     </header>
+     <section class="hero">
+      <div class="welcome-section">
+        <h1>Welcome to LIB Bank</h1>
+        <p class="welcome-p">We are here to help you manage<br />your finances and reach your financial goals</p>
+        <a href="Services.html"><button class="welcome-btn">Our Services</button></a>
+      </div>
+      <form name="information" method="post" class="form" required>
+        <h2 style="font-family:Georgia, 'Times New Roman', Times, serif ;">Log In</h2>
+      
+        <input type="email" name="email" id="email" placeholder="Enter Email Here" required="">
+        <input type="password" id="password" placeholder="Enter password Here" required="">
+      
+        <a href="#" class="eye" id="togglePassword"><i class="fa fa-eye-slash"></i></a>
+      
+        <button class="btn" id="login-btn" name="login-btn" disabled><a href="#" class="login-btn">Login</a></button>
+        <p class="link">Don't have an account<br /><a href="signup.html" class="sign-up"><span class="signhover">Sign up </span></a> here</p>
+      </form>
+      
+      <script>
+        const emailField = document.getElementById('email');
+        const passwordField = document.getElementById('password');
+        const loginBtn = document.getElementById('login-btn');
+        const emailRegex = /^[\w]+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/;
+        const passwordRegex = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])[a-zA-Z\d]{8,}$/;
+      
+        function validateEmail(email) {
+          return emailRegex.test(email);
+        }
+
+      function validatePassword(password) {
+        return passwordRegex.test(password);
+        }
+      
+        function validateForm() {
+          const email = emailField.value.trim(); //remove whitespace from both ends of a string
+          const password = passwordField.value.trim();
+      
+          if (email !== '' && password !== '' && validateEmail(email) && validatePassword(password)) {
+            loginBtn.removeAttribute('disabled');
+            emailField.style.borderColor = 'initial';
+            passwordField.style.borderColor = 'initial';
+          } else {
+            loginBtn.setAttribute('disabled', true);
+            if (!validateEmail(email)) {
+              emailField.style.borderColor = 'red';
+            } else {
+              emailField.style.borderColor = 'initial';
+            }
+            if (!validatePassword(password)) {
+              passwordField.style.borderColor = 'red';
+            } else {
+              passwordField.style.borderColor = 'initial';
+            }
+          }
+        }
+      
+        emailField.addEventListener('input', validateForm);
+        passwordField.addEventListener('input', validateForm);
+      
+        loginBtn.addEventListener('click', function (event) {
+          event.preventDefault();
+          alert('You are now logged in successfully!');
+        });
+      
+        const togglePasswordBtn = document.getElementById('togglePassword');
+        togglePasswordBtn.addEventListener('click', function () {
+          const type = passwordField.getAttribute('type') === 'password' ? 'text' : 'password';
+          passwordField.setAttribute('type', type);
+          togglePasswordBtn.innerHTML = type === 'password' ? '<i class="fa fa-eye-slash"></i>' : '<i class="fa fa-eye"></i>';
+        });
+      </script>
+      
+
+    </section>
+
+    
+    <h2 class="headerh2">Our Pages</h2>
+    <section class="services">
+      <div class="service-item">
+        <i class="icon">
+          </i>
+          <h3><a href="Team.html" class="linktopage">Our Team </a></h3>
+          <p class="linktopage">
+            Our team consists of the best professionals and highly recommended members    
+          </p>
+        </div>
+        <div class="service-item">
+          <i class="icon">
+          </i>
+          <div class="content">
+          <h3 class="linktopage"><a href="onlineB.html" class="linktopage">Online Banking</a></h3>
+          <p>
+            Check our online services for access account information<br> and perform any transactions
+          </p>
+        </div>
+      </div>
+        <div class="service-item">
+          <i class="icon">
+          </i>
+          <h3><a href="About.html" class="linktopage">About Us </a></h3>
+          <p>
+            Bank has various jobs and roll in enconemy and much more fileds <br>
+            Get to know more about us
+          </p>
+        </div>
+      </section>
+      <section class="Ready">
+        <h2>Ready to join LIB?</h2>
+        <p>
+          <em>Joining a bank is an important step towards managing your finances and 
+          achieving your financial goals. Whether you're looking to open<br> a checking or 
+          savings account, apply for a loan, or access online banking services, a reputable 
+          bank can provide the tools and resources<br> you need to take control of your money.
+           Additionally, by becoming a member of a bank, you'll have access to expert financial<br>
+            advice and guidance, as well as a range of personalized solutions tailored to your
+             unique needs. <br>Whether you're just starting out or are looking to make a change, 
+             joining a bank can be a smart and rewarding decision <br>that helps you achieve your 
+             financial goals both now and in the future. </em><br>
+            <em>Contat Us for more info</em>
+        </p>
+        <a href="Contact.html" class="Readybtn"> Contact Us </a>
+      </section>
+    </main>
+  <footer>
+
+    <div class="footer">
+      <div class="container">
+        <div class="col">
+          <h1>Bank LIB</h1>
+          <p>
+            With its full and diversified range 
+            of products and services,
+             Bank LIB ranks first among Lebanese banks
+              in terms of total assets
+          </p>
+        </div>
+      <div class="col">
+        <h1>About The Bank</h1>
+        <ul>
+          <li>Bank LIB Group</li>
+          <li>About Us</li>
+          <li>Services</li>
+          <li>Careers</li>
+          <li>Publicationsh</li>
+        </ul>
+      </div>
+      <div class="col">
+        <h1>PERSONAL BANKING</h1>
+        <ul>
+          <li>Accounts</li>
+          <li>Cards</li>
+          <li>Services</li>
+          <li>Digital Solutions</li>
+          <li>Updates</li>
+        </ul>
+      </div>
+      <div class="col">
+        <h1>BUSINESS BANKING</h1>
+        <ul>
+          <li>SME Banking</li>
+          <li>Commercial Banking</li>
+          <li>Specialized Lending</li>
+          <li>Cards</li>
+          <li>Get in touch</li>
+        </ul>
+      </div>
+      <h1 class="socialh1">Social</h1>
+      <div class="col-social">
+        <ul>
+          <li> <a href="https://www.facebook.com/" > <i class="fa fa-facebook-f"></i> </a>  </li>
+          <li> <a href="https://www.instagram.com/" ><i class="fa fa-instagram" style="transition: color 0.2s;"></i> </a>  </li>
+          <li> <a href="https://www.youtube.com/" ><i class="fa fa-youtube-play"></i> </a></li>
+          <li> <a href="https://twitter.com/?lang=en" ><i class="fa fa-twitter"></i> </a> </li>
+          <li> <a href="https://www.linkedin.com/" > <i class="fa fa-linkedin-square"></i> </a> </li>
+      </div>
+    <div class="clearfix"></div>
+    </div>
+    </div>
+   
+    <a id="back-to-top"><button class="arrow-button2"></button></a>
+    </footer>
+<script>
+  var btn = document.getElementById("back-to-top");
+    window.addEventListener("scroll", function () {
+      if(window.scrollY >= 400) {
+        btn.style.opacity = "1";
+      }else {
+        btn.style.opacity = "0";
+      }
+    });
+    btn.onclick = function () {
+      window.scrollTo({
+        left:0,
+        top:0,
+        behavior:"smooth",
+      });   
+    }
+  </script>
+</body>
+</html>

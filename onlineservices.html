@@ -1,0 +1,561 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>services</title>
+    <style>
+        .head1{
+            box-shadow: -1px 12px 12px -6px rgba(31, 24, 24, 0.5);
+            background-color: rgba(22, 20, 20, 0.678);
+            width: 100%;
+            height: 100%;
+            margin-bottom: 5%;
+            border-top: #333;
+        }
+        .head1 p{
+            text-align: center;
+            font-size: 250%;
+            padding-top: 13%;
+            width: 70%;
+            padding-left: 15%;
+            color:aquamarine;
+        } 
+        .btnhome{
+   
+   width: 15%;
+   height: 40px;
+   background: white;
+   border: none;
+   margin-top: 30px;
+   font-size: 18px;
+   margin-left: 40%;
+   border-radius: 10px;
+   cursor: pointer;
+   color: #272626;
+   align-items: center;
+  
+   transform: scale(1.1,1.1);
+  
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease-out;
+  animation: jump 1s ease-in-out infinite;
+   
+}
+@keyframes jump {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+.btnhome:hover{
+   background: aquamarine;
+   color:rgb(23, 23, 24);
+   border-color: aquamarine;
+   box-shadow: 2px 2px 2px aquamarine;
+
+ }
+ .btnhome::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  width: 200px;
+  height: 200px;
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  z-index: -1;
+  transition: all 0.5s ease-out;
+}
+
+
+
+.btnhome:hover::before {
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.services{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 300px;
+  background-color: #f9f9f9;
+  padding: 10%;
+  margin-bottom: 10%;
+
+}
+
+.box {
+  flex-basis: calc(33.33% - 20px);
+  height: 100%;
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  box-sizing: border-box;
+  transition: box-shadow 0.3s ease-in-out;
+  align-items: center;
+  
+}
+
+.box:hover {
+  box-shadow: 0px 5px 10px blue;
+  transform: scale3d(1.1,1.1,1.1);
+
+}
+
+
+.b1 {
+  background-color: whitesmoke;
+  align-items: center;
+}
+.b1 img{
+    margin-left: 20%;
+    cursor: pointer;
+}
+.b2 {
+  background-color: whitesmoke
+}
+.b2 img{
+    margin-left: 25%;
+    padding-top: 3%;
+    cursor: pointer;
+}
+.b3{
+  background-color: whitesmoke;
+}
+.b3 img{
+    margin-left: 30%;
+    padding-top: 5%;
+    cursor: pointer;
+}
+.services h2 {
+  margin-top: 0;
+  margin-bottom: 10px;
+  color: black;
+  font-size: 24px;
+  font-family:serif ;
+}
+
+.services p {
+  margin: 0;
+  color: #555;
+}
+
+.mobileP{
+    margin: 0;
+    padding: 0;
+    background-image: url(mobile.jpeg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    display: flex;
+    align-items:end;
+    justify-content: center;
+    
+}
+
+.mob{
+    background-color: white;
+    padding: 60px;
+    width: 75%;
+    text-align: center;
+    font-size: xx-large;
+    font-family:sans-serif;
+}
+.contactP p {
+    font-size: 22px;
+    line-height: 1.5;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.btnMp{
+    width: 15%;
+    height: 50px;
+    color: black;
+    border-radius: 12%;
+    background-color: #fff;
+    border-color:rgb(21, 199, 243);
+    font-weight: 500;
+    font-size: large;
+    margin-left: 1%;
+
+}
+.btnMp:hover{
+    border-color: aquamarine;
+   box-shadow: 4px 4px 4px 4px aquamarine;
+   transform: scale(1.08);
+}
+.MobileParagraph{
+    display: flex;
+    font-size: xx-large;
+    padding-bottom: 13%;
+}
+#title1{
+    padding: 5%;
+    width: 35%;
+}
+#title2{
+    padding: 5%;
+    width: 37%;
+}
+#title3{
+    padding: 5%;
+    width: 35%;
+}
+.PersonalBanking{
+    margin: 0;
+    padding: 0;
+    background-image: url(personalBank.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    display: flex;
+    align-items:end;
+    justify-content: center;
+    margin-bottom: 2%;
+}
+.PerBankingParagraph{
+    background-color: white;
+    padding: 20px;
+    width: 75%;
+
+    font-size: xx-large;
+    font-family:sans-serif;
+}
+.PerBankingParagraph p{
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.pbparagraph{
+    display: flex;
+    font-size: x-large;
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+margin-bottom: 20%;
+}
+#pblist1{
+    padding-left: 3%;
+    width: 45%;
+}
+#pblist2{
+    width: 45%;
+    padding-left: 5%;
+}
+#pblist3{
+    width: 45%;
+    padding-left: 5%;
+}
+.creditcards{
+    margin: 0;
+    padding: 0;
+    background-image: url(cards.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    display: flex;
+    align-items:end;
+    justify-content: center;
+    margin-bottom: 8%;
+}
+.creditp{
+    background-color: white;
+    padding: 20px;
+    width: 75%;
+
+    font-size: xx-large;
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+}
+.btncard{
+    width: 25%;
+    height: 60px;
+    color: black;
+    border-radius: 12%;
+    background-color: #fff;
+    border-color:rgb(21, 199, 243);
+    font-weight: 500;
+    font-size: large;
+
+   cursor: pointer;
+   transform: scale(1.1,1.1);
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease-out;
+  animation: jump 1s ease-in-out infinite;
+   
+}
+@keyframes jump {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+.btncard:hover{
+   background: #fff;
+   color:rgb(23, 23, 24);
+   transform: scale(1.1);
+   border-color: aquamarine;
+   box-shadow: 4px 4px 4px 4px aquamarine;
+ }
+ .btncard::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  width: 200px;
+  height: 200px;
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  z-index: -1;
+  transition: all 0.5s ease-out;
+}
+
+
+
+.btncard:hover::before {
+  transform: translate(-50%, -50%) scale(1);
+}
+.images{
+    
+    display: flex;
+    align-items: center;
+    margin-bottom: 10%;
+}
+.images img{
+    width: 10%;
+    height: 10%;
+    border-radius: 50%;
+    padding-right: 11%;
+    padding-left: 11%;
+    margin-bottom: 10%;
+    transition: 0.5s;
+}
+
+.images img:hover{
+    transform: scale(1.2);    
+}
+
+.arrow-button {
+  background-color: #fff;
+  border: none;
+  color: #333;
+  font-size: 16px;
+
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  border-radius: 50%;
+}
+
+.arrow-button:after {
+  content: '';
+  display: inline-block;
+  width: 0.75em;
+  height: 0.75em;
+  border: solid #333;
+  border-width: 0 0.25em 0.25em 0;
+  transform: rotate(225deg);
+  margin-left: 0.5em;
+  transition: transform 0.3s ease-in-out;
+}
+.arrow-button:hover{
+    transform: translateY(-10px);
+}
+.arrow-button2 {
+  background-color: #fff;
+  border: none;
+  color: #333;
+  font-size: 16px;
+  padding: 10px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  border-radius: 50%;
+}
+
+.arrow-button2:after {
+  content: '';
+  display: inline-block;
+  width: 0.75em;
+  height: 0.75em;
+  border: solid #333;
+  border-width: 0 0.25em 0.25em 0;
+  transform: rotate(135deg);
+  margin-left: 0.5em;
+}
+.btn3{
+    width: 60%;
+    height: 30px;
+    background: white;
+    border: none;
+
+    
+    font-size: 18px;
+
+    border-radius: 10px;
+    cursor: pointer;
+    color: brown;
+    transition: 0.4s ease;
+    transform: scale(1.1,1.1);
+}
+
+.btn3:hover{
+    background: #fff;
+    color:rgb(23, 23, 24);
+  }
+
+
+</style>
+<script>
+   function scrollToElement(className) {
+  const element = document.querySelector(className);
+  element.scrollIntoView({ behavior: "smooth" });
+}
+
+</script>
+</head>
+<body>
+    
+    <div class="head1">
+        <a href="onlineB.html"><button class="arrow-button2"></button></a>
+        <p>We’re able to give our business clients the power to bank on the same platform as Fortune 500 companies.</p>
+        <button class="btnhome" onclick="scrollToElement('.services')" type="submit"> Our Services</button>
+
+    </div>
+
+ 
+   
+
+    <main>
+       
+        
+    <section class="services">
+        <div class="box b1">
+            <img src="digital-cap-computer.png" alt="digital-cap-computer" onclick="scrollToElement('.MobileP')">
+        <center>  <h2>Mobile Application</h2></center>
+          
+        </div>
+        <div class="box b2">
+            <img src="banking-personal-brown-rgb.png" alt="banking" onclick="scrollToElement('.PersonalBanking')">
+            <br><br>
+        <center>  <h2>Personal Banking</h2></center>
+        </div>
+        <div class="box b3">
+            <img src="credit cards.png" alt=" credit" onclick="scrollToElement('.creditcards')">
+            <br><br>
+       <center>   <h2>Credit Cards</h2></center>
+         
+        </div>
+      </section>
+
+<section class="MobileP">
+     <div class="mob">
+        <button class="arrow-button" onclick="scrollToElement('.services')" ></button>
+    <h1>    Plan, invest, borrow and bank. Online & on mobile. All in one place, wherever you are</h1>
+    <p>with LIB Online℠ and the LIB Mobile® app¹</p>
+    <br>
+    <br>
+    <button class="btnMp" onclick="scrollToElement('.MobileParagraph')">Show More</button> <a href="https://play.google.com/store/games"><button class="BtnMp"> ENROLL NOW</button></a>
+     </div>
+    
+</section>
+<section class="MobileParagraph">
+    <button class="arrow-button" onclick="scrollToElement('.mob')" ></button>
+<div id="title1">
+    <h1><strong>24/7 access</strong></h1>
+    <p>  Access your investments, deposits, and credit accounts, as well as activity and balance information.</p>
+    <a href="https://play.google.com/store/games"> <button class="btn3">Learn More <button> </a>
+</div>
+   
+
+<div id="title2">
+    <h1><strong>All in one place</strong></h1>
+  <p>  Link your external bank accounts, investments, mortgages and more from 14,000+ institutions to see your complete financial picture.</p>
+  <a href="https://play.google.com/store/games">  <i>  <button class="btn3">Learn More <button> </i></a>
+</div>
+<div id="title3">
+    <h1><strong>Safe and secure</strong></h1>
+    <p>Stay protected with multiple levels of cybersecurity. Explore our resources and best practices to help protect yourself online.</p>
+    <a href="https://play.google.com/store/games"><i>  <button class="btn3">Learn More <button> </i></a>
+</div>
+</section>
+<section class="PersonalBanking">
+    
+    <div class="PerBankingParagraph">
+        <button class="arrow-button" onclick="scrollToElement('.services')" ></button>
+        <h1>Personal Banking</h1>
+        <p>Wealth can mean freedom and security, but managing it requires time and know-how. 
+            That’s why LIB Private Bank provides you with personalized services and a range of premium banking products 
+            for every aspect of your financial life. 
+            You’ll have easy access to your money, when and where you need it, and an experienced Client Service team focused on you. Plus,
+             you’ll partner with professionals who understand your goals and will work with you to help you reach them,
+             utilizing the latest mobile and online technology to facilitate it all.
+             <br>
+             <button class="btnMp" onclick="scrollToElement('.pbparagraph')">Show More</button>
+        </p>
+       
+    </div>
+</section>
+<section class="pbparagraph">
+    <button class="arrow-button" onclick="scrollToElement('.PersonalBanking')" ></button>
+    <div id="pblist1">
+        <h1><strong>Banking that follows your lead</strong></h1>
+        <p>Managing personal finances is, well, personal. Everyone has a unique approach. 
+            Our job is to identify which of our banking services match your lifestyle.
+        <br>
+        Here’s what you can expect:
+        </p>
+        <ul>
+            <li>A service experience that is centered around your and your family’s needs</li>
+            <li>Powerful mobile and online platforms for secure banking anytime, anywhere </li>
+            <li>Access to thousands of Chase branches across the country, and fee-free access to ATMs around the world</li>
+            <li>Dedicated LIB team members and client service professionals who cover your entire relationship with LIB</li>
+        </ul>
+    </div>
+    <div id="pblist2">
+        <h1><strong>A focus on the bigger picture </strong></h1>
+        <p>We help you look at your entire financial picture to make banking more efficient and more focused on your needs.
+             Our Client Service team gets to know you on a personal level and manages your full LIB relationship. 
+             The team can assist with everything from day-to-day transactions to more complex money movement and currency requests,
+             all with a personalized focus on the security of your information and assets.</p>
+    </div>
+    <div id="pblist3">
+        <h1><strong>Our personal banking products</strong></h1>
+        <p>Our team is experienced in managing both everyday cash needs and complex balance sheets to help you achieve your
+             personal and financial goals.  We take the time to understand the unique personal and professional needs of our clients,
+             and our banking products reflect that.
+             <br>
+             Our personalized offerings for your banking needs include:
+        </p>
+        <ul>
+            <li>Checking</li>
+            <li>Savings</li>
+            <li>Certificates of Deposits </li>
+            <li>Time Deposits</li>
+        </ul>
+    </div>
+
+</section>
+
+<section class="creditcards">
+<div class="creditp">
+    <button class="arrow-button" onclick="scrollToElement('.services')" ></button>
+ <h1>
+    This varied asset class potentially offers yield, enhanced returns and inflation protection
+</h1>
+<a href="mastercards.html"><center><button class="btncard">Check your card Now</button></center></a>
+</div>
+   
+
+</section>
+    </main>
+
+
+   
+</body>
+</html>

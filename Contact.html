@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+  <head>
+    <title>Contact Us</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="home.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="icon1.jpg">
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'>
+    <style>
+*{
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    box-sizing: border-box;
+  }
+  html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+main{
+  font-family: "Poppins" , sans-serif;
+}
+
+
+.content h1{
+  margin-top: 50px;
+  justify-content: space-between;
+  font-weight: bold;
+  color: rgb(36, 36, 255);
+}
+
+.content h3{
+  margin-top: 20px;
+  justify-content: space-between;
+  font-weight: bold;
+
+}
+
+.content{
+    width: 100vh;
+    background: #fff;
+    margin-top: 30px;
+    margin-left: 80px;
+    padding: 30px;
+    box-shadow: 0px 0px 10px rgb(255, 255, 255);
+}
+  
+.content form{
+    padding: 30px 0 0 0;    
+}
+.content form .form-row{
+    display: flex;
+    margin: 32px 20px 20px 20px;
+}
+  
+.content .input-data{
+    height: 40px;
+    width: 75%;
+    position: relative;
+}
+
+.content .input-data input{
+    height: 100%;
+    width: 75%;
+    border: none;
+    font-size: 17px;
+    border-bottom: 2px solid silver;
+}
+.input-data input:focus ~ label{
+    transform: translateY(-20px);
+    font-size: 15px;
+    color: var(--primary-color);
+}
+.input-data input:valid ~ label{
+    transform: translateY(-20px);
+    font-size: 15px;
+    color: var(--primary-color);
+}
+  
+.content .input-data label{
+      position: absolute;
+      bottom: 10px;
+      left: 0;
+      color: grey;
+      pointer-events: none;
+      transition: all 0.3s ease;
+}
+  
+.content .input-data .underline{
+    position: absolute;
+    bottom: 0;
+    height: 2px;
+    width: 100%;
+}
+  
+  
+.input-data .underline:before{
+      position: absolute;
+      content: "";
+      height: 100%;
+      width: 75%;
+      background: var(--primary-color);
+      transform: scaleX(0);
+      transform-origin: center;
+      transition: transform 0.3s ease;
+  
+}
+.input-data input:focus ~ .underline:before,
+.input-data input:valid ~ .underline::before{
+    transform: scaleX(1);
+}
+
+.content p{
+    font-size: smaller;
+}
+
+.content h3{
+    font-size: 28px;
+    color: rgb(0, 0, 0);
+}
+
+.content textarea{
+    width: 100%;
+    height: 56px;
+    padding: 15px;
+    outline: none;
+    resize: none;
+    font-size: 16px;
+    margin-top: 20px;
+    border-radius: 5px;
+    border-color: #bfbfbf;
+}
+
+  textarea:is(:focus,:valid){
+    padding: 14px;
+    border-width: 2px;
+    border-color: var(--primary-color);
+}
+
+textarea::-webkit-scrollbar{
+    width: 0px;
+}
+
+/* Style the checkbox container */
+.checkbox-container {
+    display: inline-block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    margin-left: 25px;
+    cursor: pointer;
+    font-size: 18px;
+}
+/* Hide the default checkbox */
+.checkbox-container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+/* Style the custom checkbox */
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #c2c2c200;
+    border: solid 1px gray;
+    border-radius: 5px;
+}
+/* Show the checkmark icon when the checkbox is checked */
+.checkbox-container input:checked ~ .checkmark:after {
+    content: "";
+    position: absolute;
+    display: block;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 10px;
+    height: 10px;
+    background-color: gray;
+    border-radius: 50%;
+}
+  /* Add hover styles */
+.checkbox-container:hover input ~ .checkmark {
+    background-color: gray;
+}
+  
+  /* Add active styles */
+.checkbox-container input:active ~ .checkmark {
+    background-color: gray;
+}
+
+.button {
+    font-size: 1.1em;
+    margin-top: -30px;
+    margin-left: 130px;
+    padding: 13px;
+    border-radius: 20px;
+    outline: none;
+    border: none;
+    width: 50%;
+    color: #fff;
+    cursor: pointer;
+    background-color: var(--primary-color);
+    transition: 0.4s ease-in-out;
+}
+
+.button:hover {
+    background: var(--button-color);
+    transform: scale(1.1);
+}
+
+.usdtext{
+  padding: 8px;
+}
+.ques {
+  padding: 10px;
+  
+}
+.cont{
+  margin-left: -100px;
+}
+.cont1{
+  margin-left: -200px;
+}
+
+    </style>
+   </head>
+<body>
+  <header class="header">
+    <a href="#" class="logo" > LIB </a>
+    <nav>
+        <ul>
+            <li> <a href="home.html"> Home </a> </li>
+            <li> <a href="#"> Menu </a> 
+                <ul>
+                    <li> <a href="Team.html"> Our Team </a> </li>
+                    <li> <a href="About.html"> About Us </a> </li>
+                    <li> <a href="#"> Services+ </a> 
+                        <ul>
+                            <li> <a href="Services.html"> Services </a> </li>
+                            <li> <a href="onlineB.html"> Online Banking </a> </li>
+                          </ul>
+                    </li>
+                </ul>
+            </li>
+            <li> <a href="Contact.html"> Contact US </a> </li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+  <div class="content">
+    <h1>Get In Touch</h1>
+    <h3>Your details</h3>
+
+
+    <form action="#">
+      <div class="form-row">
+        <div class="input-data">
+          <input id="title" type="text" required>
+          <label>Title</label>
+          <div class="underline"></div>
+        </div>
+        <div class="input-data">
+          <input id="firstn" type="text" required>
+          <label>First Name</label>
+          <div class="underline"></div>
+        </div>
+        <div class="input-data">
+          <input id="lastn" type="text" required>
+          <label>Last Name</label>
+          <div class="underline"></div>
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="input-data">
+          <input id="email" type="text" required>
+          <label>Email Address</label>
+          <div class="underline"></div>
+        </div>
+        <div class="input-data">
+          <input id="phoneNumber" type="text" required>
+          <label>Phone Number</label>
+          <div class="underline"></div>
+        </div>
+      </div>
+    </form>
+
+   <div class="content">
+    <div class="cont">
+  <h4>I have some USD investible assets</h4>
+    <p class="usdtext">Depending on the type of relationship you want to start with Bank of LIB, the minimum requirement of investible assets may vary.</p>
+    <p class="ques">Do you want to continue? </p>
+    <br>
+  <label class="checkbox-container">Yes
+    <input type="radio" checked="checked" name="radio">
+    <span class="checkmark"></span>
+
+  </label >
+  <label class="checkbox-container">No
+    <input type="radio" name="radio">
+    <span class="checkmark"></span>
+
+  </label>
+</div>
+
+<div class="cont1">
+<div class="content">
+  <h3>I would like to find out more about:</h3>
+  <br>
+  <label class="checkbox-container">
+    <input type="checkbox">
+    <span class="checkmark"></span>
+    opening account
+  </label>
+  <label class="checkbox-container">
+    <input type="checkbox">
+    <span class="checkmark"></span>
+    credit solution
+  </label>
+  <label class="checkbox-container">
+    <input type="checkbox">
+    <span class="checkmark"></span>
+    wealth planning and trust services
+  </label>
+  <label class="checkbox-container">
+    <input type="checkbox">
+    <span class="checkmark"></span>
+    alternetive investment
+  </label>
+  <label class="checkbox-container">
+    <input type="checkbox">
+    <span class="checkmark"></span>
+    others
+  </label>
+</div>
+</div>
+
+<div class="cont1">
+<div class="content">
+  <h4>Massege</h4>
+    <textarea placeholder="Write Your Massege Here" required></textarea>
+  </div>
+</div>
+
+  <script>
+    const textarea = document.querySelector("textarea");
+    textarea.addEventListener("keyup", e =>{
+    textarea.style.height = "auto";
+    let scHeight = e.target.scrollHeight;
+    textarea.style.height = `${scHeight}px`;
+
+  });
+  </script>
+</div>
+</div>
+
+
+<div class="content">
+  <a href="#"><button class="button" name="submit" id="submit" onclick="myfun()">Submit</button></a>
+</div>
+<script>
+  function myfun() {
+    const titleRegex = /^[a-zA-Z\s]*$/;
+    const title = document.getElementById('title').value.trim();
+
+    if (titleRegex.test(title) == false) {
+      alert('Invalid title');
+      return false;
+    }
+
+    const firstNameRegex = /^[a-zA-Z]+(([',. -][a-zA-Z ])?[a-zA-Z]*)*$/;
+    const firstName = document.getElementById('firstn').value.trim();
+
+    if (firstNameRegex.test(firstName) == false) {
+      alert('Invalid first name');
+      return false;
+    }
+
+    const lastNameRegex = /^[a-zA-Z]+(([',. -][a-zA-Z ])?[a-zA-Z]*)*$/;
+    const lastName = document.getElementById('lastn').value.trim();
+
+    if (lastNameRegex.test(lastName) == false) {
+      alert('Invalid last name');
+      return false;
+    } 
+
+    const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+    const email = document.getElementById('email').value.trim();
+
+    if (emailRegex.test(email) == false) {
+      alert('Invalid email address');
+      return false;
+    }
+
+    const phoneRegex = /^(\+961)?(0)?(3|70|71|76|78)\d{6}$/;
+    const phone = document.getElementById('phoneNumber').value.trim();
+
+    if (phoneRegex.test(phone) == false) {
+      alert('Invalid phone number');
+      return false;
+    }
+
+    let message = "Thank you for contacting us! We will be in touch shortly.";
+    alert(message);
+    window.location.href = 'home.html';
+    return true;
+    }
+  document.querySelector("#submit-btn").addEventListener("click", function(event) {
+event.preventDefault(); // Prevent the default form submission behavior
+
+// Your form submission logic goes here
+});
+
+
+</script>
+<!-- <script>
+  function alertmessg(){
+      let message = "Thank you for Contacting Us! We will be in touch shortly"
+      alert(message);
+  }
+</script> -->
+</main>
+
+<footer>
+
+  <div class="footer">
+    <div class="contain">
+      <div class="col">
+        <h1>Bank LIB</h1>
+        <p>
+          With its full and diversified range 
+          of products and services,
+           Bank LIB ranks first among Lebanese banks
+            in terms of total assets
+        </p>
+      </div>
+    <div class="col">
+      <h1>About The Bank</h1>
+      <ul>
+        <li>Bank LIB Group</li>
+        <li>About Us</li>
+        <li>Services</li>
+        <li>Careers</li>
+        <li>Publicationsh</li>
+      </ul>
+    </div>
+    <div class="col">
+      <h1>PERSONAL BANKING</h1>
+      <ul>
+        <li>Accounts</li>
+        <li>Cards</li>
+        <li>Services</li>
+        <li>Digital Solutions</li>
+        <li>Updates</li>
+      </ul>
+    </div>
+    <div class="col">
+      <h1>BUSINESS BANKING</h1>
+      <ul>
+        <li>SME Banking</li>
+        <li>Commercial Banking</li>
+        <li>Specialized Lending</li>
+        <li>Cards</li>
+        <li>Get in touch</li>
+      </ul>
+    </div>
+    <h1 class="socialh1">Social</h1>
+    <div class="col-social">
+      <ul>
+        <li> <a href="https://www.facebook.com/" > <i class="fa fa-facebook-f"></i> </a>  </li>
+        <li> <a href="https://www.instagram.com/" ><i class="fa fa-instagram" style="transition: color 0.2s;"></i> </a>  </li>
+        <li> <a href="https://www.youtube.com/" ><i class="fa fa-youtube-play"></i> </a></li>
+        <li> <a href="https://twitter.com/?lang=en" ><i class="fa fa-twitter"></i> </a> </li>
+        <li> <a href="https://www.linkedin.com/" > <i class="fa fa-linkedin-square"></i> </a> </li>
+    </div>
+  <div class="clearfix"></div>
+  </div>
+  </div>
+</footer>
+
+</body>
+</html>

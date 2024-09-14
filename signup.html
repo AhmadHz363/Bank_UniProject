@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="icon" href="icon1.jpg">
+	<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'>   
+    <link rel="stylesheet" href="https://fontawesome.com/v5/icons/youtube?s=&f=brands" >    
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<title>Sign Up</title>
+</head>
+<style>
+	*{
+		margin: 0;
+		padding: 0;
+		box-sizing: border-box;
+		font-family: 'Times New Roman', Times, serif;
+	}
+
+	:root {
+  /*--primary-color:rgb(0, 68, 255);*/
+  --primary-color:rgb(0, 81, 255);
+  --button-color: rgb(21, 221, 211);
+}
+
+	body {
+		background: linear-gradient(to top, rgba(0,0,0,0.5)100%,rgba(0,0,0,0.5)100%), url(homeBanner.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+		width: 100%;
+		height: 125vh;
+		display: flexbox;
+	}
+
+	.wrapper {
+		width: 34%;
+		padding: 3rem 1rem;
+		margin: 70px auto;
+		background: linear-gradient(to top, rgba(0,0,0,0.8)50%,rgba(0,0,0,0.8)50%);
+		border-radius: 10px;
+		text-align: center;
+		box-shadow: 0 20px 35px rgba(0, 0, 0, 0.1);
+	}
+
+	nav {
+		padding: 20px;
+		background-color:  #003366;
+	}
+
+	h1 {
+    font-size: 1.6em;
+    margin-bottom: 1.6em;
+    font-weight: bold;
+    font-family: sans-serif;
+    text-align: center;
+    color: var(--primary-color);
+    background-color: #fff;
+    border-radius: 10px;
+    margin: 20px auto;
+    padding: 12px 50px;
+    display: inline-block;
+  }
+
+  form input {
+    width: 85%;
+    height: 31px;
+    background: transparent;
+    border-bottom: 0.5px solid var(--button-color);
+    border-right: none;
+    border-left: none;
+    color: #fff;
+    font-size: 15px;
+    letter-spacing: 1px;
+    margin-top: 30px;
+    font-family: sans-serif;
+  }
+
+  form input:focus {
+    outline: none;
+	color: aqua;
+  }
+
+  
+  ::placeholder{
+    color: #fff;
+    margin: 5px;
+  }
+
+	.button {
+		font-size: 1.1em;
+		margin-top: 1.8rem;
+		padding: 20px;
+		padding-bottom: 40px;
+		border-radius: 20px;
+		outline: none;
+		border: none;
+		width: 80%;
+		color: #fff;
+		cursor: pointer;
+		background: var(--primary-color);
+		transition: 0.4s ease-in-out;
+	}
+
+	.button:hover {
+		background: rgba(22, 188, 253, 0.822);
+		transform: scale(1.1);
+	}
+
+	input:focus {
+		border: 0.5px solid rgb(192, 192, 192);
+	}
+
+	.terms{
+		margin-top: 0.8rem;
+	}
+
+	.terms input{
+		height: 1em;
+		width: 1em;
+		vertical-align: middle;
+		cursor: pointer;
+	}
+
+	.terms label{
+		font-size: 1em;
+		font-weight: bold;
+	}
+
+	.terms a{
+		color: rgb(17, 107, 143);
+		text-decoration: none;
+		font-weight: bold;
+	}
+
+	.member {
+		font-size: 0.9rem;
+		margin-top: 1.4rem;
+		color: #636363;
+		font-weight: bold;
+	}
+
+	.member a{
+		color: rgb(17, 107, 143);
+		text-decoration: none;
+		font-weight: bold;
+	}
+
+.eye {
+  color: #99a8ff;
+  font-size: 1.4em;
+  position: absolute;
+  margin-top: 35px;
+  margin-left: -35px;
+  cursor: pointer;
+}
+
+span {
+	color: #fff;
+	padding: 5px;
+}	
+.arrow-button2 {
+    background-color: #00000000;
+  border: none;
+  color: #23a3f8;
+  font-size: 15px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  border-radius: 50%;
+  margin-top: 15px;
+  padding-left: 10px;
+}
+
+.arrow-button2:after {
+  content: '';
+  display: inline-block;
+  width: 0.75em;
+  height: 0.75em;
+  border: solid #29b8fa;
+  border-width: 0 0.25em 0.25em 0;
+  transform: rotate(135deg);
+  margin: 5px;
+}
+</style>
+<body>
+	<header>
+		<nav>
+
+		</nav>
+	</header>
+	<main>
+		<a href="home.html"><button class="arrow-button2"></button></a>
+		<div class="wrapper">
+			<h1>Sign Up</h1>
+			<form id="form" action="#" onsubmit="alertmessg()">
+			  <div class="input-control">
+				<input type="text" id="username" placeholder="Username" required>
+				<span class="error"></span>
+			  </div>
+			  <div class="input-control">
+				<input type="email" id="email" placeholder="Email" required><br>
+				<span class="error"></span>
+			  </div>
+			  <div class="input-control">
+				<input type="password" id="password" placeholder="Password" required>
+				<a class="eye" id="togglePassword"><i class="fa fa-eye-slash"></i></a><br>
+				<span class="error"></span>
+			  </div>
+			  <div class="input-control">
+				<input type="password" id="password2" placeholder="Re-Enter Password" required>
+				<a class="eye" id="togglePassword1"><i class="fa fa-eye-slash"></i></a><br>
+				<span class="error"></span>
+			  </div>
+			  <div class="terms">
+				<input type="checkbox" id="terms-checkbox" required>
+				<label for="terms-checkbox"><span class="span" style="margin: 0px; position: relative; top: 15px;">I agree to these <a href="termsandpriv.html">Terms & Conditions</a></span></label>
+			  </div>
+			  <p id="checkbox-msg" style="color: red; display: none;">Please agree to the terms and conditions</p>
+
+			<input type="submit" value="Submit" name="submit" id="submit"  class="button" onclick="checkPassword()"><br><br>
+			<p id="result" style="color: #fff;"></p>
+				<div class="member">
+					Already a member? <a href="home.html">
+						Login Here
+					</a>
+				</div>
+		</div>
+			</form>
+			<script>
+				const form = document.getElementById('form');
+				const username = document.getElementById('username');
+				const email = document.getElementById('email');
+				const password = document.getElementById('password');
+				const password2 = document.getElementById('password2');
+				const checkbox = document.getElementById('checkbox');
+				const checkboxMsg = document.getElementById('checkbox-msg');
+			
+				form.addEventListener('submit', e => {
+				  e.preventDefault();
+			
+				  validateInputs();
+				  if (checkbox.checked) {
+					checkboxMsg.style.display = 'none';
+					checkPassword();
+				  } else {
+					checkboxMsg.style.display = 'block';
+				  }
+				});	
+				const setError = (element, message) => {
+			const inputControl = element.parentElement;
+			const errorDisplay = inputControl.querySelector('.error');
+
+			errorDisplay.innerText = message;
+			inputControl.classList.add('error');
+			inputControl.classList.remove('success')
+		}
+
+		const setSuccess = element => {
+			const inputControl = element.parentElement;
+			const errorDisplay = inputControl.querySelector('.error');
+
+			errorDisplay.innerText = '';
+			inputControl.classList.add('success');
+			inputControl.classList.remove('error');
+		};
+		const isValidEmail = email => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+		const validateInputs = () => {
+			const usernameValue = username.value.trim();
+			const emailValue = email.value.trim();
+			const passwordValue = password.value.trim();
+			const password2Value = password2.value.trim();
+
+			if(usernameValue === '') {
+				setError(username, 'Username is required');
+			} else {
+				setSuccess(username);
+			}
+
+			if(emailValue === '') {
+				setError(email, 'Email is required');
+			} else if (!isValidEmail(emailValue)) {
+				setError(email, 'Provide a valid email address');
+			} else {
+				setSuccess(email);
+			}
+
+			if(passwordValue === '') {
+				setError(password, 'Password is required');
+			} else if (passwordValue.length < 8 ) {
+				setError(password, 'Password must be at least 8 character.')
+			} else {
+				setSuccess(password);
+			}
+
+			if(password2Value === '') {
+				setError(password2, 'Please confirm your password');
+			} else if (password2Value !== passwordValue) {
+				setError(password2, "Passwords doesn't match");
+			} else {
+				setSuccess(password2);
+				alert("We are thrilled to have you on board!");
+			}	
+			
+
+		};
+				const togglePasswordBtn = document.getElementById('togglePassword');
+				const passwordField = document.getElementById('password');
+	
+				togglePasswordBtn.addEventListener('click', function() {
+					const type = passwordField.getAttribute('type') === 'password' ? 'text' : 'password';
+					passwordField.setAttribute('type', type);
+					togglePasswordBtn.innerHTML = type === 'password' ? '<i class="fa fa-eye-slash"></i>' : '<i class="fa fa-eye"></i>';
+				});
+			</script>
+			<script>
+				const togglePasswordBtn1 = document.getElementById('togglePassword1');
+				const passwordField1 = document.getElementById('password2');
+				
+				togglePasswordBtn1.addEventListener('click', function() {
+				const type = passwordField1.getAttribute('type') === 'password' ? 'text' : 'password';
+				passwordField1.setAttribute('type', type);
+				togglePasswordBtn1.innerHTML = type === 'password' ? '<i class="fa fa-eye-slash"></i>' : '<i class="fa fa-eye"></i>';
+	});
+		</script>
+
+
+	</main>
+	<footer>
+
+	</footer>
+</body>
+</html>

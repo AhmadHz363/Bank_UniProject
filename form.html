@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="icon1.jpg">
+    <title>Document</title>
+    <style>
+         #wrapper{
+            margin-top: 3%;
+            width: 65%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .p{
+          padding: 5px;
+            text-align: center;
+            color: antiquewhite;
+            font-size: 1.1em;
+        }
+        .Yes{
+          color:white;
+          padding: 2px;
+        }
+        .no{
+          color:white;
+          padding: 2px;
+        }
+       body{
+        background: linear-gradient(to top, rgba(0,0,0,0.5)50%,rgba(0,0,0,0.5)50%), url(homeBanner.jpg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        height: 115vh;
+        } 
+       .form{
+          background-color: black;
+          opacity: 0.8;
+        } 
+        label{
+          color: white;
+          padding: 5px;
+        }
+        .right{
+          margin-left :85%;
+          position: relative;
+          margin-right: 1%;
+        }
+        .label {
+          float: left;
+          display: block;
+          text-align: right;
+          font-weight: bold;
+          width: 10em;
+          padding-right: 2em;
+      }
+      .label2 {
+          float: left;
+          font-weight: bold;
+         padding-right: 1.35rem;
+         width: 19.5em;
+         text-align: right;
+         display: block;
+      }
+      .input{
+        display: block;
+    margin-bottom: 2em;
+      }
+    .left{
+      display: block;
+      text-align: right;
+      padding: 10px;
+    }
+    .button {
+  background-color: rgb(0,68,255);
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 5px 1px;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+.button:hover{
+  transform: scale(1.05);
+  background-color:white ;
+  color:rgb(0,68,255) ;
+}
+.l{
+  clear:right;
+  float: left;
+}
+.link5{
+  text-decoration: none;
+  color: rgb(42, 253, 236);
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+.pacc{
+  padding: 10px;
+  text-align: center;
+  color: antiquewhite;
+  font-size: 1.1em;
+}
+.arrow-button2 {
+    background-color: #00000000;
+  border: none;
+  color: #23a3f8;
+  font-size: 15px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  border-radius: 50%;
+  margin-top: 10px;
+}
+
+.arrow-button2:after {
+  content: '';
+  display: inline-block;
+  width: 0.75em;
+  height: 0.75em;
+  border: solid #29b8fa;
+  border-width: 0 0.25em 0.25em 0;
+  transform: rotate(135deg);
+  margin: 5px;
+}
+
+    </style>
+</head>
+<body>
+  <a href="Services.html"><button class="arrow-button2"></button></a>
+  <div id="wrapper" class="form">
+    <p class="pacc">If you dont have an account please <a class="link5" href="signup.html">sign up</a></p>
+    <form name="loan" action="">
+      <div style="padding-bottom: 70px;">
+      <div class="l">
+      <label class="label">Enter USERNAME :</label> <input name="user" id="user" style="transform: scale(1.2);" class="input" type="text">
+      <label class="label">Phone number :</label> <input name="phone" id="phonenb" style="transform: scale(1.2);" class="input" type="tel" placeholder="+961">
+      <label class="label">Loan Amount :</label> <input name="amount" id="loann" style="transform: scale(1.2);" class="input" type="text">
+      </div>
+      <div class="left">
+        <label class="label2">Reason :</label>
+        <select style="transform: scale(1.2); margin-right: 1em;" >
+        <option>Business Needs</option>
+        <option>Personal</option>
+        <option>Education</option>
+      </select><br><br>
+      <label class="label2">Currency :</label>
+      <select style="transform: scale(1.2); margin-right: 1em;">
+        <option>USD</option>
+        <option>LB</option>
+      </select>
+      </div>
+      </div>  
+      <hr>
+      <label>Are you of Lebanese Nationality and currently residing in Lebanon?</label>
+      <div class="right">
+      <span class="Yes">Yes</span><input type="radio" style="transform: scale(1.5);" name="leb" id="leb-yes" value="yes">
+      <span class="no">No</span><input type="radio" style="transform: scale(1.5);" name="leb" id="leb-no" value="no">
+      </div>
+    
+      <hr>
+      <label>Are you over 21 years of age and will have settled the requested loan before the age of 64?</label>
+      <div class="right">
+      <span class="Yes">Yes</span><input type="radio" style="transform: scale(1.5);" name="leb1" id="leb1-yes" value="yes">
+      <span class="no">No</span><input type="radio" style="transform: scale(1.5);" name="leb1" id="leb1-no" value="no">
+      </div>
+      <hr>
+      <label>Have you been consistently employed for more than one year and not retired?</label>
+      <div class="right">
+        <span class="Yes">Yes</span><input type="radio" style="transform: scale(1.5);" name="leb2" id="leb2-yes" value="yes">
+        <span class="no">No</span><input type="radio" style="transform: scale(1.5);" name="leb2" id="leb2-no" value="no">
+      </div>
+      <hr>
+      <label>Within the past year, do you confirm you have not been declined by</label><label><br>&nbsp; LIB Bank branches for a similar credit application?</label>
+      <div class="right">
+        <span class="Yes">Yes</span><input  type="radio" style="transform: scale(1.5);" name="leb3" id="leb3-yes" value="yes">
+        <span class="no">No</span><input  type="radio" style="transform: scale(1.5);" name="leb3" id="leb3-no" value="no">
+      </div>
+      <hr>
+      <label>Are you self-employed?</label>
+      <div class="right">
+        <span class="Yes">Yes</span><input style="transform: scale(1.5);" type="radio" name="leb4" id="leb4-yes" value="yes">
+        <span class="no">No</span><input type="radio" style="transform: scale(1.5);" name="leb4" id="leb4-no" value="no">
+      </div>
+      
+      <hr>
+      <label>Can you domicile your salary at LIB Bank or get a guarantor?</label>
+      <div class="right">
+        <span class="Yes">Yes</span><input type="radio" style="transform: scale(1.5);" name="leb5" id="leb5-yes" value="yes">
+        <span class="no">No</span><input type="radio" style="transform: scale(1.5);" name="leb5" id="leb5-no" value="no">
+      </div>
+      <hr>
+      <div>
+        <button style="margin-left: 5%;" type="button" class="button" onclick="validate()">Apply</button>
+        <button style="margin-left: 65%;" type="reset" class="button">Reset</button>
+      </div>
+      
+    </form>
+</div>
+</body>
+</html>
+<script>
+  var phone1=/^\d{8}$/;
+  var USERNAME=/^[a-zA-Z0-9]+$/;
+  var checkamount=/^\d+$/;
+  function validate()
+  {
+    let username = document.getElementById('user').value;
+  let phonee = document.getElementById('phonenb').value;
+  let amount = document.getElementById('loann').value;
+    if(!USERNAME.test(username))
+    {
+      alert("The username is not valid");
+      return false;
+    }
+    else if(!phone1.test(phonee))
+    {
+      alert("The number is not valid");
+      return false;
+    }
+    else if(!checkamount.test(amount))
+    {
+      alert("Please enter the loan amount");
+      return false;
+    }
+
+
+    else if(!document.getElementById('leb-yes').checked && !document.getElementById('leb-no').checked)
+    {
+      alert("please fill the radio buttons");
+      return false;
+    }
+    else if(!document.getElementById('leb1-yes').checked && !document.getElementById('leb1-no').checked)
+    {
+      alert("please fill the radio buttons");
+      return false;
+    }
+    else if(!document.getElementById('leb2-yes').checked && !document.getElementById('leb2-no').checked)
+    {
+      alert("please fill the radio buttons");
+      return false;
+    }
+    else if(!document.getElementById('leb3-yes').checked && !document.getElementById('leb3-no').checked)
+    {
+      alert("please fill the radio buttons");
+      return false;
+    }
+    else if(!document.getElementById('leb4-yes').checked && !document.getElementById('leb4-no').checked)
+    {
+      alert("please fill the radio buttons");
+      return false;
+    }
+    else if(!document.getElementById('leb5-yes').checked && !document.getElementById('leb5-no').checked)
+    {
+      alert("please fill up the radio buttons");
+      return false;
+    }
+
+
+    else{
+      alert("Thank you for submitting your request. We have received it and will review it as soon as possible.");
+      return true;
+    }
+    
+  }
+</script>

@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="https://fontawesome.com/v5/icons/youtube?s=&f=brands">
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">    
+  <link rel="icon" href="icon1.jpg">
+  <link rel="stylesheet" href="home.css">
+  <title>Our Team</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css?family=Allura|Josefin+Sans');
+
+    * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+html, body {
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+
+    body {
+      background: linear-gradient(to top, rgba(0,0,0,0.5)50%,rgba(0,0,0,0.5)50%), url(homeBanner.jpg);
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+    }
+
+    .space {
+      padding-top: 70px;
+    }
+ 
+:root {
+  /*--primary-color:rgb(0, 68, 255);*/
+  --primary-color:rgb(0, 81, 255);
+  --button-color: rgb(21, 221, 211);
+  --black-color: rgba(12, 12, 12, 0.863);
+}
+
+body > header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(255,255,255,0.65);
+  box-shadow: 0 5px 10px rgb(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 1000;
+  width: 100%;
+  padding: 10px 200px;
+}
+
+header .logo {
+  font-weight: bold;
+  font-size: 25px;
+  color: var(--primary-color);
+  text-decoration: none;
+}
+
+nav ul{
+    list-style: none;
+    margin: 0;
+    justify-content: space-between;
+}
+
+nav ul li{
+    position: relative;
+    float: left;
+}
+
+nav ul li a{
+    font-size: 20px;
+    padding: 15px;
+    color: var(--primary-color);
+    display: block;
+    text-decoration: none;
+    font-weight: 700;
+    transition: 0.3s ease-in-out;
+}
+
+nav ul li a:hover {
+    background-color: rgb(119, 117, 117);
+    color: #fff;
+    border-radius: 40%;
+}
+
+nav ul li ul {
+    position: absolute;
+    left: 0;
+    width: 200px;
+    background-color: rgba(231, 229, 229, 0.918);
+    display: none;
+}
+
+nav ul li ul li{
+    width: 100%;
+    border-top: 1px solid rgba(0,0,0,0.1);
+}
+
+nav ul li ul li ul {
+    right: 400px;
+    top: 0;
+}
+
+nav ul li:focus-within > ul,
+nav ul li:hover > ul {
+    display: initial;
+}
+
+.wrapper {
+  margin-top: 200px;
+  display: flex;
+  margin-right: 70px;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+    .wrapper h1 {
+      font-family: 'Allura', cursive;
+      font-size: 20px;
+      margin-bottom: 60px;
+      text-align: center;
+    }
+
+.team {
+    display: grid;
+    justify-content: center;
+    width: auto;
+    text-align: center;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+    margin-left: 80px;
+}
+
+.team_member {
+  background: #fff;
+  margin: 5px;
+  margin-bottom: 50px;
+  width: 300px;
+  padding: 25px;
+  height: 20em;
+  line-height: 20px;
+  color: #8e8b8b;
+  position: relative;
+  transition: 0.4s ease-in-out;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+
+.team_member:hover {
+  transform: scale(1.08);
+  background: linear-gradient(to top, rgba(0,0,0,0.8)70%, rgba(0,0,0,0.8)70%);
+  box-shadow: 0 0 5px var(--primary-color),
+              0 0 25px var(--primary-color),
+              0 0 50px var(--primary-color),
+              0 0 100px var(--primary-color);
+}
+
+.team_member h3{
+  color: rgb(0, 68, 255);
+  font-size: 21px;
+  margin-top: 50px;
+}
+
+.team_member p.role{
+  color: #ccc;
+  margin: 12px 0;
+  font-size: 10px;
+  text-transform: uppercase;
+}
+
+.team .team_member .team_img{
+  position: absolute;
+  top: -50px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: #fff;
+  cursor: pointer; 
+}
+
+.team .team_member .team_img img{
+  width: 100px;
+  height: 100px;
+  padding: 5px;
+  border-radius: 50%; 
+}
+
+.footer {
+  width: 100%;
+  position: relative;
+  height: auto;
+  background-color: #070617;
+  padding: 10px;
+  justify-content: space-around;
+}
+
+.col p{
+  color: #888;
+  padding: 0px;
+  margin: 5px;
+  justify-content: space-between;
+
+}
+
+.footer .col {
+  width: 250px;
+  height: auto;
+  float: left;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  padding: 0px 20px 20px 20px;
+}
+.footer .col h1 {
+  margin: 0;
+  padding: 0;
+  font-family: inherit;
+  font-size: 12px;
+  line-height: 17px;
+  padding: 20px 0px 5px 0px;
+  color: rgba(255,255,255,0.2);
+  font-weight: normal;
+  text-transform: uppercase;
+  letter-spacing: 0.250em;
+}
+
+.socialh1{
+  margin: 0;
+  padding: 0;
+  font-family: inherit;
+  font-size: 12px;
+  line-height: 17px;
+  padding: 20px 0px 5px 0px;
+  color: rgba(255,255,255,0.2);
+  font-weight: normal;
+  text-transform: uppercase;
+  letter-spacing: 0.250em;
+}
+
+.footer .col-social ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+.footer .col ul li {
+  color: #999999;
+  font-size: 14px;
+  font-family: inherit;
+  font-weight: bold;
+  padding: 5px 0px 5px 0px;
+  cursor: pointer;
+  transition: .2s;
+  -webkit-transition: .2s;
+  -moz-transition: .2s;
+  
+}
+.col-social ul li {
+  display: inline-block;
+  padding-right: 10px;
+  font-size: 1.4em;
+}
+
+.footer .col ul li:hover {
+  color: var(--primary-color);
+  transition: .1s;
+  -webkit-transition: .1s;
+  -moz-transition: .1s;
+}
+.clearfix {
+  clear: both;
+}
+
+.membertext div {
+  color: #fff;
+  padding: 15px;
+  font-size: 14px;
+  display: none;
+  margin: 5px;
+}
+
+.membertext:hover div {
+  display: block;
+}
+
+.team_img div{
+    color: aqua;
+}
+
+.team_member {
+  position: relative;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+.team_member .team_img {
+  position: relative;
+  overflow: hidden;
+  height: 250px;
+  width: 250px;
+  margin: 0 auto;
+}
+.team_member .team_img img {
+  max-width: 100%;
+  max-height: 100%;
+}
+.team_member .social_links {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.8);
+  opacity: 0;
+  transition: all 0.3s ease-in-out;
+}
+.team_member .social_links a {
+  display: inline-block;
+  height: 100%;
+  width: 40px;
+  padding: 8px;
+  margin: 0 5px;
+  color: #333;
+  background-color: #fff;
+  border-radius: 50%;
+  text-align: center;
+  transition: all 0.3s ease-in-out;
+}
+.team_member .social_links a:hover {
+  color: #fff;
+  background-color: var(--primary-color);
+}
+.team_member:hover .social_links {
+  opacity: 1;
+  transform: translateY(-40px);
+}
+
+.team_member .social_links a i.fa-instagram {
+  color: purple;
+}
+  </style>
+</head>
+<body>
+    <header>
+        <a href="#" class="logo" > LIB </a>
+        <nav>
+            <ul>
+                <li> <a href="Team.html"> Our Team </a> </li>
+                <li> <a href="#"> Menu </a> 
+                    <ul>
+                        <li> <a href="home.html"> Home </a> </li>
+                        <li> <a href="About.html"> About Us </a> </li>
+                        <li> <a href="#"> Services+ </a> 
+                            <ul>
+                                <li> <a href="Services.html"> Services </a> </li>
+                                <li> <a href="onlineB.html"> Online Banking </a> </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li> <a href="Contact.html"> Contact US </a> </li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="wrapper">
+            <div class="space"></div>
+            <di class="team">
+              <div class="team_member">
+                <div class="team_img">
+                  <img src="pic2.png" alt="team_member_img">
+                  <div class="social_links">
+                    <li> <a href="https://www.facebook.com/" > <i class="fa fa-facebook-f"></i> </a>  </li>
+                    <li> <a href="https://www.instagram.com/" ><i class="fa fa-instagram"></i> </a>  </li>
+                  </div>
+                </div>
+                <h3>Rayan hmedi</h3>
+                <p class="role">Bank manager</p>
+                <p class="membertext">overseeing the daily operations of the bank, ensuring customer satisfaction, and making sure that the bank's financial goals are being met</p>
+              </div>
+
+                <div class="team_member">
+                  <div class="team_img">
+                    <img src="img7.png" alt="team_member_img">
+                    <div class="social_links">
+                      <li> <a href="https://www.facebook.com/" > <i class="fa fa-facebook-f"></i> </a>  </li>
+                      <li> <a href="https://www.instagram.com/" class="social2"><i class="fa fa-instagram"></i> </a>  </li>
+                    </div>
+                  </div>
+                  <h3>Ahmad hoteit</h3>
+                  <p class="role">IT Support Specialist</p>
+                  <p class="membertext">managing the bank's information technology systems, ensuring they are secure, up-to-date, and functioning properly</p>
+                </div>
+
+                <div class="team_member">
+                  <div class="team_img">
+                    <img src="pic.png" alt="team_member_img">
+                    <div class="social_links">
+                      <li> <a href="https://www.facebook.com/" > <i class="fa fa-facebook-f"></i> </a>  </li>
+                      <li> <a href="https://www.instagram.com/" ><i class="fa fa-instagram"></i> </a>  </li>
+                    </div>
+                  </div>
+                  <h3>Mohammad Jaafer hamdar</h3>
+                  <p class="role">Customer Services</p>
+                  <p class="membertext">providing excellent customer service to bank customers. They help customers with account inquiries, resolve any issues or problems, and help customers with new account
+                    openings, loan applications, and other bank services</p>
+                </div>
+
+                <div class="team_member">
+                  <div class="team_img">
+                    <img src="img6.png" alt="team_member_img">
+                    <div class="social_links">
+                      <li> <a href="https://www.facebook.com/marwa.tlaiss.98?mibextid=LQQJ4d" > <i class="fa fa-facebook-f"></i> </a>  </li>
+                      <li> <a href="https://instagram.com/marwatlais?igshid=YmMyMTA2M2Y=" ><i class="fa fa-instagram"></i> </a>  </li>
+                    </div>
+                  </div>
+                  <h3>Marwa tlais</h3>
+                  <p class="role">Marketing Manager </p>
+                  <p class="membertext">creating and executing marketing campaigns that help the bank attract new customers and retain existing ones.</p>
+                </div>
+
+                <div class="team_member">
+                  <div class="team_img">
+                    <img src="img5.jpg" alt="team_member_img">
+                    <div class="social_links">
+                      <li> <a href="https://www.facebook.com/" > <i class="fa fa-facebook-f"></i> </a>  </li>
+                      <li> <a href="https://www.instagram.com/" ><i class="fa fa-instagram"></i> </a>  </li>
+                    </div>
+                  </div>
+                  <h3>Ahmad hijazi</h3>
+                  <p class="role">Bank Teller</p>
+                  <p class="membertext">Bank Teller, or Bank Clerk, is a bank employee who helps clients of the bank with routine financial transactions. </p>
+                </div>
+
+                <div class="team_member">
+                  <div class="team_img">
+                    <img src="pic3.png" alt="team_member_img">
+                    <div class="social_links">
+                      <li> <a href="https://www.facebook.com/" > <i class="fa fa-facebook-f"></i> </a>  </li>
+                      <li> <a href="https://www.instagram.com/" ><i class="fa fa-instagram"></i> </a>  </li>
+                    </div>
+                  </div>
+                  <h3>Mohammad farhat</h3>
+                  <p class="role">Financial Analyst</p>
+                  <p class="membertext">make informed investment decisions by analyzing financial data, creating financial models, and producing reports that help the bank evaluate different investment opportunities. </p>
+                </div>
+
+            </div>
+        </div>
+        <script>
+          // select all team member images
+          const teamImgs = document.querySelectorAll('.team_img');
+          // add mouseover event listener to each image
+          teamImgs.forEach((img) => {
+            img.addEventListener('mouseover', () => {
+              let overlay = document.createElement('div');
+              overlay.classList.add('overlay');
+              
+              overlay.innerHTML = '<i class="fa fa-facebook-f"> &nbsp; </i><i class="fa fa-instagram"></i>';
+              img.appendChild(overlay);// add overlay to the image container
+            });
+            img.addEventListener('mouseout', () => {   
+              img.removeChild(img.querySelector('.overlay'));// remove the overlay when mouse is moved away
+            });
+          });
+
+        </script>
+          <script>
+            const clickableCards = document.querySelectorAll('.team_member');
+          clickableCards.forEach(card => {
+            card.addEventListener('click', () => {
+              let mesg = "I\'m here to assist you"
+              alert(mesg);
+            });
+          });
+          </script>
+           <Script>
+            let teamMembers = document.querySelectorAll('.membertext');
+            teamMembers.forEach((member) => {
+              member.addEventListener('mouseover', (event) => {
+                let text = document.createElement('div');
+                text.textContent = 'I\'m here to help you';
+                // add code to style the text element here
+                member.appendChild(text);
+              });
+              member.addEventListener('mouseout', (event) => {
+                const text = member.querySelector('div');
+                member.removeChild(text);
+              });
+            });
+  
+          </Script>
+    </main>
+   
+    <footer>
+
+      <div class="footer">
+        <div class="contain">
+          <div class="col">
+            <h1>Bank LIB</h1>
+            <p>
+              With its full and diversified range 
+              of products and services,
+               Bank LIB ranks first among Lebanese banks
+                in terms of total assets
+            </p>
+          </div>
+        <div class="col">
+          <h1>About The Bank</h1>
+          <ul>
+            <li>Bank LIB Group</li>
+            <li>About Us</li>
+            <li>Services</li>
+            <li>Careers</li>
+            <li>Publicationsh</li>
+          </ul>
+        </div>
+        <div class="col">
+          <h1>PERSONAL BANKING</h1>
+          <ul>
+            <li>Accounts</li>
+            <li>Cards</li>
+            <li>Services</li>
+            <li>Digital Solutions</li>
+            <li>Updates</li>
+          </ul>
+        </div>
+        <div class="col">
+          <h1>BUSINESS BANKING</h1>
+          <ul>
+            <li>SME Banking</li>
+            <li>Commercial Banking</li>
+            <li>Specialized Lending</li>
+            <li>Cards</li>
+            <li>Get in touch</li>
+          </ul>
+        </div>
+        <h1 class="socialh1">Social</h1>
+        <div class="col-social">
+          <ul>
+            <li> <a href="https://www.facebook.com/" > <i class="fa fa-facebook-f"></i> </a>  </li>
+            <li> <a href="https://www.instagram.com/" ><i class="fa fa-instagram"></i> </a>  </li>
+            <li> <a href="https://www.youtube.com/" ><i class="fa fa-youtube-play"></i> </a>  </li>
+            <li> <a href="https://twitter.com/?lang=en" ><i class="fa fa-twitter"></i> </a> </li>
+            <li> <a href="https://www.linkedin.com/" > <i class="fa fa-linkedin-square"></i> </a> </li>
+        </div>
+      <div class="clearfix"></div>
+      </div>
+      </div>
+  </footer>
+</body>
+</html>
+
+<!--        <Script>
+          let teamMembers = document.querySelectorAll('.membertext');
+          teamMembers.forEach((member) => {
+            member.addEventListener('mouseover', (event) => {
+              let text = document.createElement('div');
+              text.textContent = 'I\'m here to help you';
+              // add code to style the text element here
+              member.appendChild(text);
+            });
+            member.addEventListener('mouseout', (event) => {
+              const text = member.querySelector('div');
+              member.removeChild(text);
+            });
+          });
+
+        </Script>
+              <script>
+          // get all the team member cards
+    const teamMemberss = document.querySelectorAll('.team_member');
+
+    // loop through each card and add a mouseover event listener
+    teamMemberss.forEach(member => {
+      member.addEventListener('mouseover', () => {
+        // add a class to the card on hover to reveal the icons
+        member.classList.add('show_social');
+      });
+
+      member.addEventListener('mouseout', () => {
+        // remove the class from the card when the mouse leaves the card
+        member.classList.remove('show_social');
+      });
+    });
+
+          </script>
+      
+      -->

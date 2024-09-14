@@ -1,0 +1,766 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="home.css">
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'>
+    <link rel="icon" href="icon1.jpg">
+    <title>About Us</title>
+     
+    <script>
+        function scrollToElement(className) {
+       const element = document.querySelector(className);
+       element.scrollIntoView({ behavior: "smooth" });
+     }
+     function alr(){
+    alert("You will see our annaul report for 2021 it contains our yearly official budgit and money papers");
+      }
+     </script>
+     <style>
+body {
+    min-height: 100vh;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+header {
+    z-index: 1000;
+    width: 100%;
+    padding: 10px 200px;
+    position: fixed;
+    top: 0; left: 0;  right: 0;
+    background-color: #e6e6e6;
+    box-shadow: 0 5px 10px rgb(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.paragragh{
+    font-size: 1.2rem;
+    color: #1be4f7ec;
+    padding: 10px;
+    margin: 5px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.intro{
+    padding-top: 10%;
+    font-size: larger;;
+   background-image: url(homeBanner.jpg);
+   background: linear-gradient(to top, rgba(0,0,0,0.5)50%,rgba(0,0,0,0.5)50%), url(homeBanner.jpg);
+    margin-bottom: 15%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+    padding-bottom: 30%;
+}
+.text-container {
+   position: relative;
+   display: inline-block;
+   overflow: hidden;
+  }
+.feg{
+    margin-bottom: 10%;
+    display: flex;
+    width: auto;
+}
+
+#pec2{
+    margin-left: 9%;
+}
+#pec3{
+    padding-left: 7%;
+}
+img{
+    border-radius: 50%;
+}
+
+#external{
+    text-align: center;
+    margin-left: 35%;
+    justify-content: center;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+}
+
+#external:hover{
+    transform: scale(1.03);
+}
+
+.lower{
+    background-color: rgba(128, 128, 128, 0.811);
+    display: flex;
+    margin-bottom: 5%;
+    padding: 5%;
+}
+
+#headoffice{
+    margin-left: 5%;
+    text-align: center;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+}
+
+#headoffice:hover{
+    transform: scale(1.03);
+}
+
+.chairman{
+    width: 15%;
+    margin-bottom: 10%;
+    margin-left: 5%;
+}
+
+table{
+    width: 700px;
+    box-shadow: -1px 12px 12px -6px rgba(0,0,0, 0.5) ;
+    margin-left: 27.5%;
+    margin-bottom: 10%;
+    }
+table, td{
+    padding: 20px;
+    border: 1px solid lightgray;
+    border-collapse: collapse;
+    text-align: center;
+}
+td{
+    font-size: 18px;
+}
+tr:nth-child(odd){
+    background-color: lightgray;
+}
+tr:nth-child(even):hover {
+    background-color:#1feed6;
+    color: white;
+    transform: scale(1.05);
+    transition: transform 300ms ease-in ;
+}
+
+
+#back-to-top{
+    position: fixed;
+    bottom: 3em;
+    right: 3em;
+    color: rgb(0, 0, 0);
+    border: none;
+    border-radius: 5px;
+    padding: 1em;
+    text-transform: uppercase;
+    cursor: pointer;
+    font-weight: 700;
+    display: inline-block;
+    opacity: 0;
+    text-decoration: none;
+    font-size: .75em;
+  }
+  #back-to-top:hover{
+    background-color: beige;
+  }
+  #back-to-top.visible{
+    opacity: 1;
+  }
+
+  .arrow-button2 {
+    background-color: #00000000;
+  border: none;
+  color: #23a3f8;
+  font-size: 15px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  border-radius: 50%;
+}
+
+.arrow-button2:after {
+  content: '';
+  display: inline-block;
+  width: 0.75em;
+  height: 0.75em;
+  border: solid #29b8fa;
+  border-width: 0 0.25em 0.25em 0;
+  transform: rotate(220deg);
+  margin: 5px;
+}
+
+.scroll-down {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  margin-left: -20px;
+  display: block;
+  width: 40px;
+  height: 40px;
+  border: 2px solid white;
+  border-radius: 50%;
+  animation: scroll-down 2s ease-in-out infinite;
+}
+.scroll-down::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(45deg);
+  width: 10px;
+  height: 10px;
+  border-right: 2px solid rgb(22, 246, 253);
+  border-bottom: 2px solid rgb(22, 246, 253);
+}
+
+@keyframes scroll-down {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.coopparagraph{
+    align-items: center;
+    width: 70%;
+    padding-left: 30%;
+    font-family: inherit;
+    font-size: large;
+    margin-bottom: 10%;
+    background-image: url(copback.png);
+    background-repeat: no-repeat;
+    margin-bottom: 10%;
+}
+
+.work{
+    background-image: url(copback.png);
+    
+    background-repeat: no-repeat;
+    font-family: inherit;
+    font-size: large;
+    align-items: center;
+    padding-left: 20%;
+   width: 90%;
+   display: flex;
+   margin-bottom: 10%;
+}
+.work1{
+    width: 44%;
+    border: 4px  solid #9df9ef;
+    padding: 30px;
+    border-style:double;
+    font-size: larger;
+    transition: 0.3s ease-in-out;
+}
+.work1:hover{
+    transform: scale(1.06);
+}
+.work2{
+    padding: 30px;
+    border: 4px  solid #9df9ef;
+    width: 60%;
+    margin-left: 10%;
+    font-size: x-large;
+    border-style: double;
+    transition: 0.3s ease-in-out;
+}
+.work2:hover{
+    transform: scale(1.06);
+}
+
+.work ul li::marker{
+        color: green;
+}
+
+
+.chairman{
+    display: flex;
+    width: 90%;
+    background-color: #e6e6e6;
+}
+.charimg{
+    width: 60%;
+    height: 50%;
+}
+.charimg img{
+    height: 20%;
+    width: 90%;
+    border-radius: 0;
+}
+.annual{
+    font-family: inherit;
+    font-size: x-large;
+    height: 100%;
+    padding-top: 8%;
+}
+.annual p{
+    font-size: smaller;
+    width: 80%;
+}
+.annual h1{
+    color: darkblue;
+}
+#dash{
+    border: 2px solid rgb(104, 104, 240);
+    margin-left: 35%;
+    margin-right: 35%;
+    margin-bottom: 10%;
+}
+.btn{
+    width: 30%;
+    height: 30px;
+    background:#e6e6e6;
+    border: none;
+    font-size: 18px;
+    margin-top: 5%;
+    margin-left: 25%;
+    cursor: pointer;
+    color:  rgb(104, 104, 240);
+    transition: 0.4s ease;
+    transform: scale(1.1,1.1);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.btn:hover{
+    background:#e6e6e6;
+    color:rgb(23, 23, 24);
+    transform: scale(1.2);
+  }
+.report img{
+ border-radius: 0; 
+ width: 70%;
+ 
+ margin-left: 13%;
+}
+.report{
+    width: 80%;
+    
+    align-items: center;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-bottom: 30%;
+    margin-top: 30%;
+}
+
+
+.report p{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: large;
+}
+.report h1{
+    color:  rgb(104, 104, 240);
+    font-size: xx-large;
+    margin-right: 70%;
+}
+.intro h2{
+    text-align: center;
+    justify-content: center;
+    color: aqua;
+    margin: auto;
+    padding: auto;
+    font-size: 2.1rem;
+}
+
+.parag1{
+    border: 0.2px solid rgba(13, 59, 165, 0.586);
+    padding: 10px;
+    transition: 0.3s ease-in-out;
+    box-shadow: 0 5px 30px rgba(1 1 1 / 15%);
+}
+
+.parag1:hover{
+    transform: scale(1.04);
+    box-shadow: 0 0 5px #23a3f8;
+}
+.parag2{
+    border: 0.2px solid rgba(13, 59, 165, 0.586);
+    padding: 10px;
+    transition: 0.3s ease-in-out;
+    box-shadow: 0 5px 30px rgba(1 1 1 / 15%);
+}
+
+.parag2:hover{
+    transform: scale(1.04);
+    box-shadow: 0 0 5px #23a3f8;
+}
+.parag3{
+    border: 0.2px solid rgba(13, 59, 165, 0.586);
+    padding: 10px;
+    transition: 0.3s ease-in-out;
+    box-shadow: 0 5px 30px rgba(1 1 1 / 15%);
+}
+
+.parag3:hover{
+    transform: scale(1.04);
+    box-shadow: 0 0 5px #23a3f8;
+}
+
+.tabletitle{
+    margin: 10px;
+    font-size: 1.7rem;
+    font-weight: bold;
+    color: #066bae;
+}
+
+.image1{
+    padding-left: 15px;
+    transition: 0.3s ease-in-out;
+}
+
+.image1:hover{
+    transform: scale(1.05);
+    margin-bottom: 8px;
+}
+
+.image2{
+    padding-right: 5px;
+    transition: 0.3s ease-in-out;
+}
+
+.image2:hover{
+    transform: scale(1.05);
+    margin-bottom: 8px;
+}
+.image3{
+    transition: 0.3s ease-in-out;
+}
+
+.image3:hover{
+    transform: scale(1.05);
+    margin-bottom: 0px;
+}
+@keyframes wave {
+   0% { transform: translateY(0); }
+   50% { transform: translateY(-10px); }
+   100% { transform: translateY(0); }
+  }
+  .wavy{
+   animation-name: wave;
+   animation-duration: 1.8s;
+   animation-iteration-count: infinite;
+   animation-timing-function: ease-in;
+  }
+</style>
+
+</head>
+<body>
+    <div id="wrapper">
+        <header class="header">
+            <a href="#" class="logo" > LIB </a>
+            <nav>
+                <ul>
+                    <li> <a href="home.html"> Home </a> </li>
+                    <li> <a href="#"> Menu </a> 
+                        <ul>
+                            <li> <a href="Team.html"> Our Team </a> </li>
+                            <li> <a href="About.html"> About Us </a> </li>
+                            <li> <a href="#"> Services+ </a> 
+                                <ul>
+                                    <li> <a href="Services.html"> Services </a> </li>
+                                    <li> <a href="onlineB.html"> Online Banking </a> </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li> <a href="Contact.html"> Contact US </a> </li>
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+    
+            <div class="intro">
+                <h2 class="m1"><b>About the Bank</b></h2>
+                <br>
+                <br>
+                <p class="paragragh">With its full and diversified range of products and services, <br>
+                    Bank Audi ranks first among Lebanese banks in terms of total assets,<br> shareholders' equity, customers' deposits, loans and advances</p>
+                
+                </div>
+                <a href="#section-2" class="scroll-down" ></a>
+            
+            <section class="feg">
+            
+            <div>
+                <figure>
+                    <img src="prc1.png" class="image1"  alt="orc1.png" onclick="scrollToElement('.coopparagraph')" >
+                    <figcaption><center><h2 >CORPORATE PROFILE</h2></center></figcaption>
+                
+                </figure>
+                
+                </div>
+                <div id="pec2">
+                <figure>
+                    <a href="https://blog.hubspot.com/marketing/company-profile"><img src="prc2.png" class="image2"  alt="prc2"></a>
+                    <figcaption><center><h2>MANAGEMENT</h2></center></figcaption>
+                </figure>
+                </div>
+                <div id="pec3">
+                <figure>
+                    <img src="prc3.png" alt="prc3" class="image3"  onclick="scrollToElement('.corres')">
+                    <figcaption><h2><center>WORLDWIDE CORRESPONDENTS </center></h2></figcaption>
+                
+                </figure>
+            
+            </div>
+            
+            </section>
+            
+            <section class="lower">
+            
+                <div id="external">
+                    <figure>
+                        <img src="external.png" alt="external">
+            
+                        <figcaption><center><h2>External Auditors</h2>  </center></figcaption>
+                    </figure>
+            
+                </div>
+            
+                <div id="headoffice">
+            
+                    <figure>
+                         <img src="headoffice.png" alt="headoff" onclick="scrollToElement('.work')">
+                         <figcaption><center><h2>Working Time</h2></center></figcaption>
+            
+                    </figure>
+            
+                </div>
+            
+            </section>
+            
+            
+            
+        
+<section class="chairman">
+    <div class="charimg">
+        <img src="ceo.jpg" alt="ceo">
+    </div>
+      <div class="annual">
+       <center> Annual Report</center> 
+    
+       <div id="dash"></div>
+       <h1 class="wavy">Read our 2021 Annual Report</h1> <br>
+       <p>And, see the annual shareholder letter from Chairman & CEO Jamie Dimon.</p>
+       <button class="btn" onclick="scrollToElement('.report')" onmouseleave="alr()"> Read it &nbsp;><button> 
+     </div>
+    </section>
+    
+    
+    <section class="report">
+    
+        <h1 class="wavy">Dear Fellow Shareholders</h1>
+       <p> We are facing challenges at every turn: a pandemic, unprecedented government actions,
+         a strong recovery after a sharp and deep global recession, a highly polarized U.S. election,
+          mounting inflation, a war in Ukraine and dramatic economic sanctions against Russia. 
+          While all this turmoil has serious ramifications on our company,
+           its effect on the world — with the extreme suffering of the Ukrainian people and the 
+           potential restructuring of the global order — 
+           is far more important
+           <br><br>
+           <img src="diag.png" alt="diag1">
+           <br><br>
+           <p class="wavyy">
+           Adding to the disruption, these events are unfolding while America remains divided within its borders,
+            with many arguing that it has lost its essential leadership role outside of its borders and around the world.
+             But during this difficult time, we have a moment to put aside our differences, 
+             offer solutions and work with others in the Western world to come together in defense of democracy and essential freedoms,
+            including free enterprise. We have seen America, in partnership with other countries around the globe,
+            come together previously during instances of conflict and crisis.
+            This juncture is also a moment when our country needs to work across the private and public sectors to lead once again by, 
+            among other remediations, improving American competitiveness and better fulfilling equal access to opportunity for all. 
+            JPMorgan Chase, a company that has historically worked across borders and boundaries, 
+            will do its part to ensure the global economy is safe and secure.
+            I discuss these themes later in this letter.
+           </p>
+            <br><br>
+            <img src="diag2.png" alt="diag2">
+            <br><br>
+            Although I begin this annual letter to shareholders in a challenging landscape, 
+            I remain proud of what our company and our hundreds of thousands of employees around the world have achieved, collectively and individually.
+             As you know, we have long championed the essential role of banking in a community — its potential for bringing people together, 
+             for enabling companies and individuals to reach for their dreams, and for being a source of strength in difficult times. 
+             Throughout these past two challenging years,
+             we never stopped doing all the things we should be doing to serve our clients and our communities.
+       </p>
+       <br><br>
+       <img src="diag3.png" alt="diag3" id="diag3">
+       <br><br>
+       <p>Finally, the basis of our success is our people. They are the ones who serve our customers and communities, build the technology, 
+        make the strategic decisions, manage the risks, determine our investments and drive innovation.
+         Whatever your view is of the world's complexity and the risks and opportunities ahead, having a great team of people — with guts, brains,
+          integrity and enormous capabilities to navigate personally challenging circumstances 
+        while maintaining high standards of professional excellence — is what ensures our prosperity, now and in the future.</p>
+    
+    
+    </section>            
+            
+            <div class="corres">
+                <table>
+                    <tr>
+                        <td>AUSTRIA</td>
+                        <td>Vienna</td>
+                        <td> UniCredit Bank Austria AG</td>
+                    </tr>
+            
+                    <tr>
+                        <td>CANADA</td>
+                        <td>toronto</td>
+                        <td>bank</td>
+                    </tr>
+                    <tr>
+                        <td>CHINA</td>
+                        <td>  Shanghai</td>
+                        <td>Standard Chartered Bank (China) Ltd.</td>
+                    </tr>
+            
+                    <tr>
+                        <td>EGYPT</td>
+                        <td>Cairo</td>
+                        <td>National Bank of Egypt</td>
+                    </tr>
+            
+                    <tr>
+                        <td>FINLAND</td>
+                        <td>Helsinki</td>
+                        <td>Nordea Bank Finland Plc</td>
+                    </tr>
+            
+                    <tr>
+                        <td>SWEDEN</td>
+                        <td>Stockholm</td>
+                        <td>Skandinaviska Enskilda Banken AB  (Publ)</td>
+                    </tr>
+                </table>
+            
+            </div>
+            
+            <div class="coopparagraph">
+                <div class="parag1">
+                    Founded in 1830, the Bank was incorporated in its present form in 1962 as a private joint stock company with limited liability
+                    (société anonyme libanaise) with a duration of 99 years. 
+                    The Bank is registered on the Beirut Commercial Registry under number 11347 and on the Lebanese List of Banks under number 56. 
+                    The initial shareholders of the Bank were members of the LIB family, together with certain Kuwaiti investors. . 
+                    Since 1983, the shareholder base has expanded and currently is comprised of more than 1,500 holders of Common Shares and Global Depositary Receipts 
+                    (representing Common Shares). 
+                   The Common Shares including the Global Depositary Receipts are listed on Beirut Stock Exchange.
+                </div>
+                    <br><br>
+                    <div class="parag2">
+                        The Bank's head office and registered address is Bank LIB Plaza, Omar Daouk Street, 
+                        Bab Idriss, Beirut 2021 8102, P.O. Box: 11-2560, Beirut, Lebanon.
+                    </div>
+                    <br><br>
+                    <div class="parag3">
+                        The Bank is a leading Lebanese banking group with a universal banking profile,
+                        offering a full range of products and services that principally cover commercial and corporate banking, retail and personal banking and private banking.
+                         As at end-September 2022 total assets reached LL 37,185 billion, shareholders’ equity LL 2,424 billion, customers’ deposits LL 29,990 billion, loans and advances LL 6,181 billion. 
+                         In addition to its historic presence in Lebanon, Switzerland and France, the Group currently operates in Saudi Arabia, Qatar,
+                          Abu Dhabi (through a representative office), Turkey.
+                    </div>
+            </div>
+            <div class="work">
+                <div class="work1">
+                    <h1 style="color: #066bae">Working At LIB </h1>
+                    <br>
+                    <p>
+                        At LIB Bank, our people are our most valuable asset and our search for talent surpasses technical competence.
+                         In a culture that strives on fairness, ethics, transparency, and respect, employment is handled according to set standards and procedures.
+                          Discrimination of any type is prohibited. 
+                        We offer equal opportunities to all our employees without regard to gender, religion, ethnical background, age, or disability.
+                    </p>
+                </div>
+                    <div class="work2">
+                        <ul>
+                            <li>3,326+ employees worldwide</li> <br>
+                            <li>2,115+ employees in Lebanon</li> <br>
+                            <li>52.58% to 47.42% is the female to male ratio in LIB BANK, Lebanon</li><br>
+                            <li>39.21% of LIB BANK employees in Lebanon are under the age of 35</li>
+                        </ul>
+                    </div>
+                  
+                </div>
+            </main>
+
+<footer>
+
+    <div class="footer">
+      <div class="container">
+        <div class="col">
+          <h1>Bank LIB</h1>
+          <p>
+            With its full and diversified range 
+            of products and services,
+             Bank LIB ranks first among Lebanese banks
+              in terms of total assets
+          </p>
+        </div>
+      <div class="col">
+        <h1>About The Bank</h1>
+        <ul>
+          <li>Bank LIB Group</li>
+          <li>About Us</li>
+          <li>Services</li>
+          <li>Careers</li>
+          <li>Publicationsh</li>
+        </ul>
+      </div>
+      <div class="col">
+        <h1>PERSONAL BANKING</h1>
+        <ul>
+          <li>Accounts</li>
+          <li>Cards</li>
+          <li>Services</li>
+          <li>Digital Solutions</li>
+          <li>Updates</li>
+        </ul>
+      </div>
+      <div class="col">
+        <h1>BUSINESS BANKING</h1>
+        <ul>
+          <li>SME Banking</li>
+          <li>Commercial Banking</li>
+          <li>Specialized Lending</li>
+          <li>Cards</li>
+          <li>Get in touch</li>
+        </ul>
+      </div>
+      <h1 class="socialh1">Social</h1>
+      <div class="col-social">
+        <ul>
+          <li> <a href="https://www.facebook.com/" > <i class="fa fa-facebook-f"></i> </a>  </li>
+          <li> <a href="https://www.instagram.com/" ><i class="fa fa-instagram" style="transition: color 0.2s;"></i> </a>  </li>
+          <li> <a href="https://www.youtube.com/" ><i class="fa fa-youtube-play"></i> </a></li>
+          <li> <a href="https://twitter.com/?lang=en" ><i class="fa fa-twitter"></i> </a> </li>
+          <li> <a href="https://www.linkedin.com/" > <i class="fa fa-linkedin-square"></i> </a> </li>
+      </div>
+    <div class="clearfix"></div>
+    </div>
+    </div>
+   
+    <a id="back-to-top"><button class="arrow-button2"></button></a>
+    </footer>
+    <script>
+        var btn = document.getElementById("back-to-top");
+          window.addEventListener("scroll", function () {
+            if(window.scrollY >= 400) {
+              btn.style.opacity = "1";
+            }else {
+              btn.style.opacity = "0";
+            }
+          });
+          btn.onclick = function () {
+            window.scrollTo({
+              left:0,
+              top:0,
+              behavior:"smooth",
+            });   
+          }
+        </script>
+
+</div>
+</body>
+</html>
